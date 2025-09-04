@@ -1,0 +1,385 @@
+/* 0) Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=VT323&display=swap');
+
+/* 1) Brand tokens */
+:root {
+  /* Background */
+  --bg-900: #0A0A0A;   /* deep black */
+  --bg-800: #0d1b2a;   /* dark blue gradient start */
+
+  /* Text */
+  --text-100: #F5F5F5;
+  --text-200: #E6E6E6;
+  --text-300: #CCCCCC;
+  --muted-400: #9AA4AF;
+
+  /* Accents */
+  --accent-1: #00FFFF;  /* cyan */
+  --accent-2: #005DAA;  /* TMU blue */
+  --accent-3: #FF6B35;  /* orange */
+
+  /* Surfaces */
+  --card-800: #121821;
+  --border-700: #1E2A36;
+}
+
+/* 2) Global base with stronger specificity */
+html, body {
+  background: radial-gradient(circle at top, var(--bg-800), var(--bg-900)) !important;
+  color: var(--text-300) !important;
+  color-scheme: dark;
+  min-height: 100%;
+}
+html body,
+html body .article-style,
+html body .page-body,
+html body .home-section,
+html body .wg-hero {
+  font-family: 'VT323', monospace !important;
+  font-size: 24px;
+}
+
+/* 3) Headings */
+h1, h2, h3, h4,
+.section-heading, .hero-title, .page-title {
+  font-family: 'Orbitron', sans-serif !important;
+  color: var(--text-100) !important;
+  text-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+}
+
+/* 4) Links */
+a { color: var(--accent-1); }
+a:hover { color: #7FFBFF; }
+
+/* 5) Kill bright backgrounds that the theme injects */
+.home-section,
+.wg-hero,
+.wg-about,
+.wg-people,
+.wg-pages,
+.page-body,
+.article-style {
+  background: transparent !important;
+}
+
+/* 6) Cards, lists, code on dark */
+.card, .pub-list, .docs-toc, .docs-sidebar, pre, code, blockquote {
+  background: var(--card-800) !important;
+  border: 1px solid var(--border-700) !important;
+  color: var(--text-200) !important;
+}
+
+/* 7) Navbar */
+.navbar {
+  background: rgba(0,0,0,0.3) !important;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-link, .navbar-brand {
+  color: var(--text-200) !important;
+}
+.nav-link:hover, .navbar-brand:hover {
+  color: var(--accent-1) !important;
+}
+
+/* 8) Buttons */
+.btn, .button, .btn-primary {
+  background: var(--accent-2) !important;
+  border-color: var(--accent-2) !important;
+  color: #fff !important;
+}
+.btn:hover { filter: brightness(1.07); }
+
+/* 9) Dotted rules */
+hr, .hr-dotted, .rule {
+  border: 0;
+  height: 1px;
+  background: repeating-linear-gradient(to right, rgba(255,255,255,.7) 0 1px, transparent 1px 6px) !important;
+  opacity: .7;
+}
+
+/* 10) Utility classes from your original file */
+.bg-primary { background-color: var(--bg-900); }
+.bg-secondary { background-color: var(--bg-800); }
+.bg-card { background-color: var(--card-800); }
+
+.text-primary { color: var(--text-100); }
+.text-secondary { color: var(--text-200); }
+.text-muted { color: var(--text-300); }
+.text-accent { color: var(--muted-400); }
+
+.accent-cyan { color: var(--accent-1); }
+.accent-blue { color: var(--accent-2); }
+.accent-orange { color: var(--accent-3); }
+
+.border-primary { border-color: var(--border-700); }
+
+/* 11) Page header alignment */
+.universal-wrapper h1 { text-align: center; }
+
+/* 12) Center CTA shortcode buttons */
+.cta-group { justify-content: center; }
+
+/* 13) Home specific classes used in your content/home/_index.md */
+
+/* Announcement bar */
+.hcmi-topbar {
+  background:#f2cfc8; color:#1b1b1b;
+  display:flex; gap:16px; align-items:center; justify-content:center;
+  padding:10px 16px; font-size:14px; letter-spacing:.4px;
+}
+.hcmi-topbar-btn {
+  border:1px solid #1b1b1b; padding:6px 10px; background:#1b1b1b; color:#f2cfc8; font-size:12px;
+}
+
+/* Hero */
+.hcmi-hero { position: relative; overflow: hidden; padding-top: 48px; }
+.hcmi-hero .hero-title, .hcmi-hero h1 { font-size: clamp(32px, 5vw, 44px); margin-bottom: 12px; }
+.hcmi-hero .hero-lead, .hcmi-hero p { max-width: 720px; line-height: 1.8; }
+
+/* Right side glow blob */
+.hcmi-hero::after {
+  content:"";
+  position:absolute; inset:-10% -8% -10% 55%;
+  background:
+    radial-gradient(60% 60% at 60% 40%, rgba(255,255,255,.22), rgba(255,255,255,0) 60%),
+    radial-gradient(40% 50% at 80% 60%, rgba(255,255,255,.18), rgba(255,255,255,0) 60%),
+    linear-gradient(#000,#000);
+  mix-blend-mode:screen; pointer-events:none; filter: blur(1px) contrast(110%);
+}
+@media (max-width: 980px){ .hcmi-hero::after { display:none; } }
+
+/* Mission block */
+.hcmi-mission {
+  background:#fff; color:#1d1d1d;
+  display:grid; grid-template-columns: 160px 1fr 1fr; gap: 40px;
+  padding: 80px 24px 120px; max-width: 1200px; margin: 0 auto;
+}
+.hcmi-mission .label {
+  color:#9b4b3a; letter-spacing:2px; text-transform:lowercase; align-self:start;
+}
+.hcmi-mission .label::before {
+  content:"**************";
+  display:block; color:#9b4b3a; margin-bottom:10px; font-size:14px; letter-spacing:1.5px;
+}
+.hcmi-mission p {
+  font-family: 'VT323', monospace;
+  font-size: 24px; line-height: 1.9; color:#444; max-width: 46ch;
+}
+@media (max-width: 980px){
+  .hcmi-mission { grid-template-columns: 1fr; padding: 56px 20px 72px; }
+}
+
+/* --- Navbar and menu font overrides --- */
+.navbar,
+.navbar .navbar-nav,
+.navbar .nav-link,
+.navbar .dropdown-item,
+.navbar-brand {
+  font-family: 'VT323', monospace !important;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-200) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover,
+.navbar-brand:hover {
+  color: var(--accent-1) !important;
+}
+
+/* Custom styling for smaller hero image */
+.hero-image-small .hero-media img {
+  max-width: 300px !important;
+  max-height: 200px !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Make hero section twice as tall */
+.hero-image-small {
+  min-height: 1200px !important;
+}
+
+.hero-image-small .hero-media {
+  min-height: 1200px !important;
+}
+
+/* Fullscreen hero section styling */
+.fullscreen {
+  min-height: 100vh;
+}
+
+/* Navbar font size */
+.navbar-nav .nav-link {
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+}
+
+.navbar-brand {
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+}
+
+/* Hero section with large title */
+.hero-large-title h1 {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 60px !important;
+  line-height: 1.2 !important;
+}
+
+.hero-large-title p {
+  font-size: 5rem !important;
+  line-height: 1.6 !important;
+  margin-top: 80px !important;
+}
+
+/* Responsive adjustments for hero title */
+@media (max-width: 768px) {
+  .hero-large-title h1 {
+    font-size: 3rem !important;
+    margin-bottom: 40px !important;
+  }
+  
+  .hero-large-title p {
+    font-size: 1.2rem !important;
+    margin-top: 30px !important;
+  }
+}
+
+/* Custom styling for Principal Investigator - larger photo and font */
+.people-widget .portrait[data-src*="morteza-zihayat"] {
+  width: 200px !important;
+  height: 200px !important;
+  max-width: 200px !important;
+  max-height: 200px !important;
+}
+
+.people-widget .portrait[data-src*="morteza-zihayat"] img {
+  width: 200px !important;
+  height: 200px !important;
+  max-width: 200px !important;
+  max-height: 200px !important;
+}
+
+/* Larger font for Principal Investigator name */
+.people-widget .portrait[data-src*="morteza-zihayat"] + .portrait-title h3 {
+  font-size: 1.5em !important;
+  font-weight: bold !important;
+}
+
+.people-widget .portrait[data-src*="morteza-zihayat"] + .portrait-title h4 {
+  font-size: 1.2em !important;
+  font-weight: 600 !important;
+}
+
+/* HCMI static hero */
+.hcmi-hero-static {
+  position: relative;
+  padding: 64px 0 40px 0;
+  background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(13,27,42,1) 100%);
+  border-bottom: 1px solid var(--border-700);
+}
+
+.hcmi-hero-static .hero-title,
+.hcmi-hero-static h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-100);
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+  margin-bottom: 16px;
+  font-size: clamp(36px, 5.2vw, 56px);
+}
+
+.hcmi-hero-static .hero-lead,
+.hcmi-hero-static p {
+  font-family: 'VT323', monospace;
+  font-size: clamp(18px, 2.2vw, 20px);
+  line-height: 1.55;
+  color: var(--text-300);
+  max-width: 720px;
+}
+
+/* Right-side image sizing */
+.hcmi-hero-static .hero-media img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 18px rgba(0,255,255,0.25));
+}
+
+/* Optional accent baseline under title */
+.hcmi-hero-static .hero-title::after {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 2px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, var(--accent-1), transparent);
+}
+
+/* Responsive tweak for narrow screens */
+@media (max-width: 900px) {
+  .hcmi-hero-static {
+    padding: 40px 0 28px 0;
+  }
+  .hcmi-hero-static .hero-media img {
+    max-width: 300px;
+    margin-top: 16px;
+  }
+}
+
+/* HCMI static hero */
+.hcmi-hero-static {
+  position: relative;
+  padding: 64px 0 40px 0;
+  background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(13,27,42,1) 100%);
+  border-bottom: 1px solid var(--border-700);
+}
+
+.hcmi-hero-static .hero-title,
+.hcmi-hero-static h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-100);
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+  margin-bottom: 16px;
+  font-size: clamp(36px, 5.2vw, 56px);
+}
+
+.hcmi-hero-static .hero-lead,
+.hcmi-hero-static p {
+  font-family: 'VT323', monospace;
+  font-size: clamp(18px, 2.2vw, 20px);
+  line-height: 1.55;
+  color: var(--text-300);
+  max-width: 720px;
+}
+
+/* Right-side image sizing */
+.hcmi-hero-static .hero-media img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 18px rgba(0,255,255,0.25));
+}
+
+/* Optional accent baseline under title */
+.hcmi-hero-static .hero-title::after {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 2px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, var(--accent-1), transparent);
+}
+
+
+
+
