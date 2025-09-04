@@ -1,0 +1,3 @@
+[submodule "themes/research-group"]
+	path = themes/research-group
+	url = https://github.com/HugoBlox/theme-research-group.git
