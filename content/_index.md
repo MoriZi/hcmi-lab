@@ -77,10 +77,10 @@ sections:
             <img src="media/att.jpg" alt="AT&T" class="img-fluid" style="max-height: 80px;">
           </div>
           <div class="col-6 col-lg-3 text-center mb-4">
-            <img src="media/university-waterloo-logo.png" alt="University of Waterloo" class="img-fluid" style="max-height: 80px;">
+            <img src="media/university-waterloo-logo.jpg" alt="University of Waterloo" class="img-fluid" style="max-height: 80px;">
           </div>
           <div class="col-6 col-lg-3 text-center mb-4">
-            <img src="media/university-toronto-logo.png" alt="University of Toronto" class="img-fluid" style="max-height: 80px;">
+            <img src="media/university-toronto-logo.jpg" alt="University of Toronto" class="img-fluid" style="max-height: 80px;">
           </div>
           <div class="col-6 col-lg-3 text-center mb-4">
             <img src="/media/globe-mail-logo.jpg" alt="Globe and Mail" class="img-fluid" style="max-height: 80px;">

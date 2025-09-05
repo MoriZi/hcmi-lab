@@ -6,6 +6,9 @@
 title: HCMI Lab # Website name
 baseURL: 'https://hcmi.ee.torontomu.ca/' # Website URL
 
+# Favicon
+favicon: '/images/hcmi-logo.jpg'
+
 ############################
 ## LANGUAGE
 ############################
