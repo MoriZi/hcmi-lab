@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: HCMI Lab # Website name
-baseURL: 'https://hcmi.ee.torontomu.ca/' # Website URL
+baseURL: 'http://hcmi.ee.torontomu.ca/' # Website URL
 
 # Favicon
 favicon: '/images/hcmi-logo.jpg'

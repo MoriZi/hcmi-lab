@@ -46,11 +46,11 @@ sections:
     design:
       columns: '1'
       background:
-        video:
-          filename: video.mp4
+        image:
+          filename: hcmi.jpg
           filters:
-            brightness: 0.7
-          parallax: false
+            brightness: 0.4
+          parallax: true
           position: center
           size: cover
           text_color_light: true

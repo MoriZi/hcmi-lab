@@ -1,5 +1,0 @@
-# MIME types for video and image files
-AddType video/mp4 .mp4
-AddType video/webm .webm
-AddType video/ogg .ogv
-AddType image/webp .webp
