@@ -1,27 +1,30 @@
 ---
 # Display name
-title: Yisheng Li
+title: Niloufar Naeeni
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: PhD Student
+role: Research Assistant
 organizations:
   - name: Toronto Metropolitan University
     url: https://www.torontomu.ca/
 
+# Avatar image
+avatar:
+  filename: avatar.jpg
+  caption: Niloufar Naeeni
+
 # Short bio (displayed in user profile at end of posts)
-bio: Yisheng Li is a PhD student in the Human-Centered Machine Intelligence Lab, working on explaining homophily in conspiracy theories.
+bio: Niloufar Naeeni is a Research Assistant in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and artificial intelligence.
 
 # Interests to show in About widget
 interests:
-  - Social Network Analysis
-  - Conspiracy Theories
-  - Homophily
   - Machine Learning
-  - Data Mining
-
+  - Artificial Intelligence
+  - Data Science
+  - Research Methods
 
 # Social/Academic Networking
 social:
@@ -33,17 +36,18 @@ social:
     link: "#"
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "yisheng.li@torontomu.ca"
+email: "niloufar.naeeni@torontomu.ca"
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 
 # Weight for ordering
-weight: 1
+weight: 7
 
 # Organizational groups that you belong to (for People widget)
 user_groups:
-  - Alumni
+  - Researchers
 ---
 
-Yisheng Li is a PhD student in the Human-Centered Machine Intelligence Lab, working on explaining homophily in conspiracy theories. His research focuses on understanding social network patterns and their implications for information spread and belief formation.
+Niloufar Naeeni is a Research Assistant in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and artificial intelligence.
+

@@ -1,27 +1,25 @@
 ---
 # Display name
-title: Yisheng Li
+title: Shirin Seyedsalehi
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: PhD Student
+role: PhD Student (Alumni)
 organizations:
   - name: Toronto Metropolitan University
     url: https://www.torontomu.ca/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Yisheng Li is a PhD student in the Human-Centered Machine Intelligence Lab, working on explaining homophily in conspiracy theories.
+bio: Shirin Seyedsalehi is a former PhD student and alumna of the Human-Centered Machine Intelligence Lab.
 
 # Interests to show in About widget
 interests:
-  - Social Network Analysis
-  - Conspiracy Theories
-  - Homophily
   - Machine Learning
-  - Data Mining
-
+  - Information Retrieval
+  - Bias Mitigation
+  - Neural Networks
 
 # Social/Academic Networking
 social:
@@ -33,17 +31,18 @@ social:
     link: "#"
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "yisheng.li@torontomu.ca"
+email: ""
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 
 # Weight for ordering
-weight: 1
+weight: 10
 
 # Organizational groups that you belong to (for People widget)
 user_groups:
   - Alumni
 ---
 
-Yisheng Li is a PhD student in the Human-Centered Machine Intelligence Lab, working on explaining homophily in conspiracy theories. His research focuses on understanding social network patterns and their implications for information spread and belief formation.
+Shirin Seyedsalehi is a former PhD student and alumna of the Human-Centered Machine Intelligence Lab at Toronto Metropolitan University. Her research focused on bias mitigation in information retrieval systems and neural ranking models.
+

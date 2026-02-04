@@ -43,7 +43,7 @@ weight: 7
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Researchers
+  - Alumni
 ---
 
 Rimona Taame is a Research Assistant in the Human-Centred Machine Intelligence Lab, where she is developing AI News Watch, an AI social media agent using ElizaOS to monitor AI-related news, classify stories by human-impact risk, generate responsible summaries, and build a structured dataset for future research. She is an undergraduate student at Toronto Metropolitan University.

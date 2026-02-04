@@ -16,19 +16,18 @@ publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Proceedings of the 33rd ACM International Conference on Information and Knowledge Management"
-publication_short: "ACM CIKM"
+publication_short: "CIKM"
 
-abstract: "This paper presents selective query generation approaches for enhanced retrieval effectiveness, improving search performance through intelligent query expansion."
+abstract: "This paper presents a novel approach for enhancing retrieval effectiveness through selective query generation, improving information retrieval performance by strategically generating and selecting queries."
 
 # Summary. An optional shortened abstract.
 summary: "Enhanced retrieval effectiveness through selective query generation."
 
 tags:
+  - Information Retrieval
   - Query Generation
-  - Retrieval Effectiveness
-  - Selective Methods
-  - Search Performance
-  - Query Expansion
+  - Search Effectiveness
+  - Machine Learning
 featured: false
 
 url_pdf: ""
@@ -50,4 +49,4 @@ projects: []
 slides: ""
 ---
 
-This work introduces selective query generation for improved retrieval effectiveness.
+This work introduces selective query generation techniques to improve retrieval effectiveness in information retrieval systems.

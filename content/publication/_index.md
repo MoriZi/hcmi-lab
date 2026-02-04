@@ -32,7 +32,6 @@ sort_by: date
 sort_ascending: false
 
 # View options
-view: citation
 view_name: Citation View
 
 # Optional header image

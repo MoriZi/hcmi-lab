@@ -3,6 +3,10 @@ title: Mehdi Kargar
 avatar:
   filename: avatar.jpg
   caption: Dr. Mehdi Kargar
+role: Affiliated Faculty
+organizations:
+  - name: Toronto Metropolitan University
+    url: https://www.torontomu.ca/
 bio: Dr. Mehdi Kargar is an Assistant Professor at Toronto Metropolitan University and an affiliated faculty member of the Human-Centered Machine Intelligence Lab. His research interests include data mining, social network analysis, and machine learning.
 interests:
   - Data Mining
@@ -22,5 +26,5 @@ email: "mehdi.kargar@torontomu.ca"
 highlight_name: true
 weight: 2
 user_groups:
-  - Affiliated Faculty
+  - Faculty
 ---

@@ -6,13 +6,13 @@ title: Shayan Alipour
 superuser: false
 
 # Role/position
-role: Research Assistant
+role: Postdoc
 organizations:
   - name: Toronto Metropolitan University
     url: https://www.torontomu.ca/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Shayan Alipour is a Research Assistant in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science.
+bio: Shayan Alipour is a Postdoctoral Researcher in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science.
 
 # Interests to show in About widget
 interests:
@@ -39,11 +39,11 @@ email: "shayan.alipour@torontomu.ca"
 highlight_name: false
 
 # Weight for ordering
-weight: 6
+weight: 1
 
 # Organizational groups that you belong to (for People widget)
 user_groups:
   - Researchers
 ---
 
-Shayan Alipour is a Research Assistant in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science. His research focuses on developing innovative approaches to pattern recognition and deep learning.
+Shayan Alipour is a Postdoctoral Researcher in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science. His research focuses on developing innovative approaches to pattern recognition and deep learning.

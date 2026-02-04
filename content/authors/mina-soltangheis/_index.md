@@ -1,5 +1,9 @@
 ---
 title: Mina Soltangheis
+role: PhD Student
+organizations:
+  - name: Toronto Metropolitan University
+    url: https://www.torontomu.ca/
 avatar:
   filename: avatar.jpg
   caption: Mina Soltangheis

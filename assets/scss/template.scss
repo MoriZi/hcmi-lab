@@ -1,217 +1,262 @@
-/* 0) Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=VT323&display=swap');
+/* ============================================
+   HCMI Lab Website - Custom Stylesheet
+   ============================================
+   
+   This file contains all custom styling for the HCMI Lab website.
+   It overrides the base Hugo/Wowchemy theme with a clean, academic design.
+   
+   Structure:
+   1. CSS Variables (Design Tokens)
+   2. Global Base Styles (Theme Overrides)
+   3. Component: Homepage Section 1 (Identity)
+   4. Component: Homepage Section 2 (Latest News)
+   5. Component: Homepage Section 3 (Collaborators)
+   6. Component: Publication Pages
+   7. Utility Classes
+   8. Legacy/Unused Classes (Commented)
+   ============================================ */
 
-/* 1) Brand tokens */
+
+/* ============================================
+   1. CSS VARIABLES (Design Tokens)
+   ============================================
+   TMU brand colors and design system tokens
+   Used throughout the stylesheet for consistency
+   ============================================ */
+
 :root {
-  /* Background */
-  --bg-900: #0A0A0A;   /* deep black */
-  --bg-800: #0d1b2a;   /* dark blue gradient start */
+  /* Background Colors */
+  --bg-primary: #FFFFFF;      /* white */
+  --bg-secondary: #F7F8FA;     /* very light gray */
+  --bg-footer: #1A1A1A;        /* dark for footer */
 
-  /* Text */
-  --text-100: #F5F5F5;
-  --text-200: #E6E6E6;
-  --text-300: #CCCCCC;
-  --muted-400: #9AA4AF;
+  /* Text Colors - using TMU logo colors */
+  --text-primary: #003366;      /* TMU dark blue (from logo) */
+  --text-secondary: #555555;   /* muted gray for secondary text */
+  --text-white: #FFFFFF;       /* white (from logo) */
+  --text-200: #555555;         /* Alias for text-secondary (used in navbar) */
 
-  /* Accents */
-  --accent-1: #00FFFF;  /* cyan */
-  --accent-2: #005DAA;  /* TMU blue */
-  --accent-3: #FF6B35;  /* orange */
+  /* Accent Colors - TMU brand colors */
+  --accent-blue: #003366;      /* TMU dark blue (from logo) */
+  --accent-1: #003366;         /* Alias for accent-blue (used in navbar, hero-static) */
+  --accent-yellow: #FFD100;     /* TMU yellow/gold (from logo) */
 
-  /* Surfaces */
-  --card-800: #121821;
-  --border-700: #1E2A36;
+  /* Surface Colors */
+  --card-bg: #FFFFFF;
+  --border-color: #E0E0E0;
 }
 
-/* 2) Global base with stronger specificity */
+
+/* ============================================
+   2. GLOBAL BASE STYLES
+   ============================================
+   Theme overrides and base typography
+   Minimal global styles - component-specific styles below
+   ============================================ */
+
+/* Base HTML/Body - Light theme override */
 html, body {
-  background: radial-gradient(circle at top, var(--bg-800), var(--bg-900)) !important;
-  color: var(--text-300) !important;
-  color-scheme: dark;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  color-scheme: light;
   min-height: 100%;
 }
+
+/* Typography - System font stack for clean, academic appearance */
 html body,
 html body .article-style,
 html body .page-body,
 html body .home-section,
 html body .wg-hero {
-  font-family: 'VT323', monospace !important;
-  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-/* 3) Headings */
+/* Global Headings - Base styles (component-specific overrides below) */
 h1, h2, h3, h4,
 .section-heading, .hero-title, .page-title {
-  font-family: 'Orbitron', sans-serif !important;
-  color: var(--text-100) !important;
-  text-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  font-weight: 600;
+  text-shadow: none !important;
 }
 
-/* 4) Links */
-a { color: var(--accent-1); }
-a:hover { color: #7FFBFF; }
+/* Global Links - TMU blue (component-specific overrides below) */
+a { 
+  color: var(--accent-blue) !important; 
+}
+a:hover { 
+  color: #002244 !important; 
+}
 
-/* 5) Kill bright backgrounds that the theme injects */
+/* Background Overrides - Light theme */
 .home-section,
 .wg-hero,
 .wg-about,
-.wg-people,
 .wg-pages,
 .page-body,
-.article-style {
-  background: transparent !important;
+.wg-people {
+  background: var(--bg-primary) !important;
 }
 
-/* 6) Cards, lists, code on dark */
+/* People page - All text should be dark blue */
+.wg-people,
+.wg-people h1,
+.wg-people h2,
+.wg-people h3,
+.wg-people h4,
+.wg-people h5,
+.wg-people h6,
+.wg-people p,
+.wg-people span,
+.wg-people div,
+.wg-people li,
+.wg-people td,
+.wg-people th,
+.wg-people label,
+.wg-people strong,
+.wg-people b,
+.wg-people em,
+.wg-people i,
+.page-people,
+.page-people h1,
+.page-people h2,
+.page-people h3,
+.page-people h4,
+.page-people h5,
+.page-people h6,
+.page-people p,
+.page-people span,
+.page-people div,
+.page-people li,
+.page-people td,
+.page-people th,
+.page-people label,
+.page-people strong,
+.page-people b,
+.page-people em,
+.page-people i {
+  color: var(--text-primary) !important; /* Dark blue #003366 */
+}
+
+/* People page links */
+.wg-people a,
+.page-people a {
+  color: var(--text-primary) !important; /* Dark blue #003366 */
+}
+
+.wg-people a:hover,
+.page-people a:hover {
+  color: #002244 !important;
+  text-decoration: underline !important;
+}
+
+/* People widget specific elements */
+.people-widget,
+.people-widget h1,
+.people-widget h2,
+.people-widget h3,
+.people-widget h4,
+.people-widget h5,
+.people-widget h6,
+.people-widget p,
+.people-widget span,
+.people-widget div,
+.people-widget li,
+.people-widget label,
+.people-widget strong,
+.people-widget b,
+.people-widget em,
+.people-widget i,
+.people-widget .portrait-title,
+.people-widget .portrait-title *,
+.people-widget .portrait-title h3,
+.people-widget .portrait-title h4,
+.people-widget .portrait-title p,
+.people-widget .portrait-title span {
+  color: var(--text-primary) !important; /* Dark blue #003366 */
+}
+
+.people-widget a {
+  color: var(--text-primary) !important; /* Dark blue #003366 */
+}
+
+.people-widget a:hover {
+  color: #002244 !important;
+  text-decoration: underline !important;
+}
+
+/* Additional People page elements */
+.wg-people .card,
+.wg-people .card-body,
+.wg-people .card-title,
+.wg-people .card-text,
+.page-people .card,
+.page-people .card-body,
+.page-people .card-title,
+.page-people .card-text,
+.people-widget .card,
+.people-widget .card-body,
+.people-widget .card-title,
+.people-widget .card-text {
+  color: var(--text-primary) !important; /* Dark blue #003366 */
+}
+
+/* Markdown content in People page (Alumni section) */
+.wg-people .markdown,
+.page-people .markdown,
+.wg-people article,
+.page-people article,
+.wg-people section,
+.page-people section {
+  color: var(--text-primary) !important; /* Dark blue #003366 */
+}
+
+.wg-people .markdown h1,
+.wg-people .markdown h2,
+.wg-people .markdown h3,
+.wg-people .markdown h4,
+.wg-people .markdown p,
+.wg-people .markdown li,
+.wg-people .markdown strong,
+.page-people .markdown h1,
+.page-people .markdown h2,
+.page-people .markdown h3,
+.page-people .markdown h4,
+.page-people .markdown p,
+.page-people .markdown li,
+.page-people .markdown strong {
+  color: var(--text-primary) !important; /* Dark blue #003366 */
+}
+
+/* Cards, Lists, Code - Light theme */
 .card, .pub-list, .docs-toc, .docs-sidebar, pre, code, blockquote {
-  background: var(--card-800) !important;
-  border: 1px solid var(--border-700) !important;
-  color: var(--text-200) !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
 }
 
-/* 7) Navbar */
+/* Navbar - Light theme */
 .navbar {
-  background: rgba(0,0,0,0.3) !important;
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.nav-link, .navbar-brand {
-  color: var(--text-200) !important;
-}
-.nav-link:hover, .navbar-brand:hover {
-  color: var(--accent-1) !important;
+  background: rgba(255,255,255,0.98) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* 8) Buttons */
-.btn, .button, .btn-primary {
-  background: var(--accent-2) !important;
-  border-color: var(--accent-2) !important;
-  color: #fff !important;
-}
-.btn:hover { filter: brightness(1.07); }
-
-/* 9) Dotted rules */
-hr, .hr-dotted, .rule {
-  border: 0;
-  height: 1px;
-  background: repeating-linear-gradient(to right, rgba(255,255,255,.7) 0 1px, transparent 1px 6px) !important;
-  opacity: .7;
-}
-
-/* 10) Utility classes from your original file */
-.bg-primary { background-color: var(--bg-900); }
-.bg-secondary { background-color: var(--bg-800); }
-.bg-card { background-color: var(--card-800); }
-
-.text-primary { color: var(--text-100); }
-.text-secondary { color: var(--text-200); }
-.text-muted { color: var(--text-300); }
-.text-accent { color: var(--muted-400); }
-
-.accent-cyan { color: var(--accent-1); }
-.accent-blue { color: var(--accent-2); }
-.accent-orange { color: var(--accent-3); }
-
-.border-primary { border-color: var(--border-700); }
-
-/* 11) Page header alignment */
-.universal-wrapper h1 { text-align: center; }
-
-/* 12) Center CTA shortcode buttons */
-.cta-group { justify-content: center; }
-
-/* 13) Home specific classes used in your content/home/_index.md */
-
-/* Announcement bar */
-.hcmi-topbar {
-  background:#f2cfc8; color:#1b1b1b;
-  display:flex; gap:16px; align-items:center; justify-content:center;
-  padding:10px 16px; font-size:14px; letter-spacing:.4px;
-}
-.hcmi-topbar-btn {
-  border:1px solid #1b1b1b; padding:6px 10px; background:#1b1b1b; color:#f2cfc8; font-size:12px;
-}
-
-/* Hero */
-.hcmi-hero { position: relative; overflow: hidden; padding-top: 48px; }
-.hcmi-hero .hero-title, .hcmi-hero h1 { font-size: clamp(32px, 5vw, 44px); margin-bottom: 12px; }
-.hcmi-hero .hero-lead, .hcmi-hero p { max-width: 720px; line-height: 1.8; }
-
-/* Right side glow blob */
-.hcmi-hero::after {
-  content:"";
-  position:absolute; inset:-10% -8% -10% 55%;
-  background:
-    radial-gradient(60% 60% at 60% 40%, rgba(255,255,255,.22), rgba(255,255,255,0) 60%),
-    radial-gradient(40% 50% at 80% 60%, rgba(255,255,255,.18), rgba(255,255,255,0) 60%),
-    linear-gradient(#000,#000);
-  mix-blend-mode:screen; pointer-events:none; filter: blur(1px) contrast(110%);
-}
-@media (max-width: 980px){ .hcmi-hero::after { display:none; } }
-
-/* Mission block */
-.hcmi-mission {
-  background:#fff; color:#1d1d1d;
-  display:grid; grid-template-columns: 160px 1fr 1fr; gap: 40px;
-  padding: 80px 24px 120px; max-width: 1200px; margin: 0 auto;
-}
-.hcmi-mission .label {
-  color:#9b4b3a; letter-spacing:2px; text-transform:lowercase; align-self:start;
-}
-.hcmi-mission .label::before {
-  content:"**************";
-  display:block; color:#9b4b3a; margin-bottom:10px; font-size:14px; letter-spacing:1.5px;
-}
-.hcmi-mission p {
-  font-family: 'VT323', monospace;
-  font-size: 24px; line-height: 1.9; color:#444; max-width: 46ch;
-}
-@media (max-width: 980px){
-  .hcmi-mission { grid-template-columns: 1fr; padding: 56px 20px 72px; }
-}
-
-/* --- Navbar and menu font overrides --- */
 .navbar,
 .navbar .navbar-nav,
 .navbar .nav-link,
 .navbar .dropdown-item,
 .navbar-brand {
-  font-family: 'VT323', monospace !important;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
   color: var(--text-200) !important;
 }
 
-.navbar .nav-link:hover,
-.navbar .dropdown-item:hover,
-.navbar-brand:hover {
-  color: var(--accent-1) !important;
-}
-
-/* Custom styling for smaller hero image */
-.hero-image-small .hero-media img {
-  max-width: 300px !important;
-  max-height: 200px !important;
-  width: auto !important;
-  height: auto !important;
-}
-
-/* Make hero section twice as tall */
-.hero-image-small {
-  min-height: 1200px !important;
-}
-
-.hero-image-small .hero-media {
-  min-height: 1200px !important;
-}
-
-/* Fullscreen hero section styling */
-.fullscreen {
-  min-height: 100vh;
-}
-
-/* Navbar font size */
 .navbar-nav .nav-link {
   font-size: 0.85rem !important;
   font-weight: 500 !important;
@@ -222,34 +267,889 @@ hr, .hr-dotted, .rule {
   font-weight: 600 !important;
 }
 
-/* Hero section with large title */
-.hero-large-title h1 {
-  font-size: 4rem !important;
+.navbar-brand img {
+  display: inline-block !important;
+  max-height: 40px !important;
+  width: auto !important;
+  margin-right: 8px !important;
+  vertical-align: middle !important;
+}
+
+.nav-link, .navbar-brand {
+  color: var(--text-primary) !important;
+}
+
+.nav-link:hover, 
+.navbar-brand:hover,
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover,
+.navbar-brand:hover {
+  color: var(--accent-1) !important;
+}
+
+/* Buttons - TMU blue */
+.btn, .button, .btn-primary {
+  background: var(--accent-blue) !important;
+  border-color: var(--accent-blue) !important;
+  color: var(--text-white) !important;
+}
+
+.btn:hover { 
+  background: #002244 !important;
+  border-color: #002244 !important;
+  color: var(--text-white) !important;
+}
+
+/* Dotted Rules */
+hr, .hr-dotted, .rule {
+  border: 0;
+  height: 1px;
+  background: repeating-linear-gradient(to right, rgba(255,255,255,.7) 0 1px, transparent 1px 6px) !important;
+  opacity: .7;
+}
+
+/* Page Header Alignment */
+.universal-wrapper h1 { 
+  text-align: center; 
+}
+
+/* Center CTA Shortcode Buttons */
+.cta-group { 
+  justify-content: center; 
+}
+
+/* Override dark backgrounds for publication lists in news section */
+.home-section-news .pub-list,
+.home-section-news .pub-list-item {
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+
+/* ============================================
+   3. COMPONENT: Homepage Section 1 (Identity)
+   ============================================
+   Used in: content/_index.md (css_class: home-section-identity)
+   
+   Stanford-inspired two-column layout with lab name, mission,
+   and hero image. TMU blue color scheme.
+   ============================================ */
+
+.home-section-identity {
+  background: var(--bg-primary) !important;
+  background-image: none !important;
+  background-color: var(--bg-primary) !important;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 24px !important;
+  position: relative;
+}
+
+/* Subtle decorative shape from bottom left */
+.home-section-identity::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background: var(--bg-primary);
+  border-radius: 50% 50% 0 0;
+  opacity: 0.3;
+  transform: translate(-30%, 30%);
+  z-index: 0;
+}
+
+/* Two-column grid container */
+.home-identity-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* More space for image column */
+  gap: 60px;
+  align-items: end; /* Align items to bottom */
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left column: Text content */
+.home-identity-text {
+  text-align: left;
+}
+
+.home-identity-text h1 {
+  font-size: clamp(3rem, 6vw, 5rem) !important;
   font-weight: 700 !important;
-  margin-bottom: 60px !important;
-  line-height: 1.2 !important;
+  color: var(--accent-blue) !important;
+  margin-bottom: 24px !important;
+  line-height: 1.1 !important;
+  text-shadow: none !important;
+  letter-spacing: -0.02em;
 }
 
-.hero-large-title p {
-  font-size: 5rem !important;
-  line-height: 1.6 !important;
-  margin-top: 80px !important;
+.home-identity-text p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  color: var(--text-secondary) !important;
+  font-weight: 400;
+  margin: 0;
 }
 
-/* Responsive adjustments for hero title */
-@media (max-width: 768px) {
-  .hero-large-title h1 {
-    font-size: 3rem !important;
-    margin-bottom: 40px !important;
+/* Right column: Hero image */
+.home-identity-image {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end; /* Align image to bottom */
+  justify-content: center;
+}
+
+.home-identity-image .hero-image {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: Larger screens - more space for image */
+@media (min-width: 1200px) {
+  .home-identity-container {
+    grid-template-columns: 1fr 1.5fr;
   }
   
-  .hero-large-title p {
-    font-size: 1.2rem !important;
-    margin-top: 30px !important;
+  .home-identity-image .hero-image {
+    min-width: 600px;
   }
 }
 
-/* Custom styling for Principal Investigator - larger photo and font */
+@media (min-width: 1400px) {
+  .home-identity-container {
+    grid-template-columns: 1fr 1.8fr;
+  }
+  
+  .home-identity-image .hero-image {
+    min-width: 700px;
+  }
+}
+
+/* Responsive: Mobile - stack vertically */
+@media (max-width: 968px) {
+  .home-identity-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .home-identity-text {
+    text-align: left;
+  }
+  
+  .home-identity-image {
+    min-height: 300px;
+  }
+  
+  .home-section-identity::before {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+/* ============================================
+   4. COMPONENT: Homepage Section 2 (Latest News)
+   ============================================
+   Used in: content/_index.md (css_class: home-section-news)
+   
+   Puzzle-style masonry grid layout with news cards.
+   Cards have varying sizes (small: 1x1, large: 2x1).
+   ============================================ */
+
+.home-section-news {
+  background: var(--bg-primary) !important;
+  padding: 100px 24px !important;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Constrain markdown wrapper width */
+.home-section-news .wg-markdown,
+.home-section-news .markdown,
+.home-section-news [class*="markdown"] {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Section Title - Target h1 inside section-heading (theme renders title as h1) */
+.home-section-news .section-heading h1,
+.home-section-news .section-heading h1.mb-0,
+.home-section-news h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem) !important;
+  font-weight: 700 !important;
+  color: #003366 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  text-align: left !important;
+  margin-bottom: 40px !important;
+}
+
+/* Puzzle container - CSS Grid masonry layout */
+.news-puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* News cards - base styling */
+.news-card {
+  background: var(--bg-primary) !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease;
+  break-inside: avoid;
+}
+
+.news-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Small cards - 1 column, 1 row */
+.news-card-small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Large cards - 2 columns, 1 row (double width) */
+.news-card-large {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+/* Card title */
+.news-card h3 {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  margin: 0 0 16px 0 !important;
+  line-height: 1.4 !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Card description */
+.news-card p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: var(--text-primary) !important;
+  margin: 0 0 20px 0 !important;
+  flex-grow: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Read more section */
+.news-card .read-more-sec {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.news-card .read-more-sec a,
+.news-card .read-more-sec a.arrow {
+  color: var(--accent-blue) !important;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.news-card .read-more-sec a:hover,
+.news-card .read-more-sec a.arrow:hover {
+  color: #002244 !important;
+  text-decoration: underline;
+}
+
+.news-card .read-more-sec a.arrow::after {
+  content: " →";
+  margin-left: 4px;
+}
+
+/* Responsive: Tablet - 2 columns */
+@media (max-width: 992px) {
+  .news-puzzle-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .news-card-large {
+    grid-column: span 2;
+  }
+}
+
+/* Responsive: Mobile - 1 column */
+@media (max-width: 768px) {
+  .news-puzzle-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .news-card-large {
+    grid-column: span 1;
+  }
+  
+  .home-section-news {
+    padding: 60px 20px !important;
+  }
+  
+  .home-section-news h2 {
+    text-align: center;
+  }
+}
+
+
+/* ============================================
+   5. COMPONENT: Homepage Section 3 (Collaborators)
+   ============================================
+   Used in: content/_index.md (css_class: home-section-collaborators)
+   
+   Logo grid displaying research collaborators.
+   White background, grayscale logos with hover effect.
+   ============================================ */
+
+.home-section-collaborators {
+  background: var(--bg-primary) !important; /* White background */
+  padding: 80px 24px !important;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.home-section-collaborators h2,
+.home-section-collaborators .section-heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem) !important;
+  font-weight: 700 !important;
+  color: var(--accent-blue) !important; /* Dark blue */
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  text-align: left !important;
+  margin-bottom: 40px !important;
+}
+
+/* All text in collaborators section should be dark blue */
+.home-section-collaborators,
+.home-section-collaborators * {
+  color: var(--accent-blue) !important;
+}
+
+/* Links should also be dark blue */
+.home-section-collaborators a {
+  color: var(--accent-blue) !important;
+}
+
+.home-section-collaborators a:hover {
+  color: #002244 !important;
+}
+
+.home-section-collaborators .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.home-section-collaborators .col-6,
+.home-section-collaborators .col-lg-3 {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-section-collaborators img {
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.home-section-collaborators img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .home-section-collaborators {
+    padding: 60px 20px !important;
+  }
+  
+  .home-section-collaborators h2 {
+    text-align: center;
+  }
+}
+
+
+/* ============================================
+   6. COMPONENT: Publication Pages
+   ============================================
+   Used in: All publication detail pages (.article-container)
+   
+   Clean, academic design with:
+   - Paper title
+   - Author list (with links)
+   - Venue/year/type
+   - Abstract (labeled)
+   - Metadata block
+   - Action links
+   - Optional author profiles
+   ============================================ */
+
+/* Main publication page container */
+.article-container {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 100px 24px !important;
+  background: var(--bg-primary) !important;
+}
+
+.article-style {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* Hide only social sharing buttons - keep everything else visible */
+.article-container .share-box,
+.article-container [class*="share"],
+.article-style .share-box,
+.article-style [class*="share"] {
+  display: none !important;
+}
+
+/* Hide content that appears after research areas (tags) */
+.article-container .article-tags + .article-style,
+.article-container .article-tags ~ .article-style {
+  display: none !important;
+}
+
+/* Hide author card section */
+.article-container .author-card,
+.article-container .media.author-card,
+.article-container .content-widget-hr,
+.article-container [class*="author-card"] {
+  display: none !important;
+}
+
+/* Title - clean and prominent */
+.article-container h1,
+.article-style h1,
+.article-style .article-title,
+.article-style .page-title {
+  font-size: clamp(2rem, 4vw, 2.5rem) !important;
+  font-weight: 700 !important;
+  color: var(--accent-blue) !important;
+  line-height: 1.3 !important;
+  margin: 0 0 40px 0 !important;
+  text-align: left !important;
+  letter-spacing: -0.01em;
+}
+
+/* Authors - clean inline list with links */
+.article-container .article-metadata .author-highlighted,
+.article-container .article-metadata a,
+.article-style .article-authors,
+.article-style .authors,
+.article-style [class*="author"] {
+  margin: 0 0 24px 0 !important;
+  padding: 0 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  color: var(--text-primary) !important;
+}
+
+.article-container .article-metadata a,
+.article-style .article-authors a,
+.article-style .authors a,
+.article-style [class*="author"] a {
+  color: var(--accent-blue) !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  transition: color 0.2s ease;
+}
+
+.article-container .article-metadata a:hover,
+.article-style .article-authors a:hover,
+.article-style .authors a:hover {
+  color: #002244 !important;
+  text-decoration: underline !important;
+}
+
+/* Highlight corresponding author */
+.article-container .article-metadata .author-highlighted a,
+.article-style .article-authors strong,
+.article-style .authors strong,
+.article-style [class*="author"] strong {
+  font-weight: 700 !important;
+  color: var(--accent-blue) !important;
+}
+
+/* Venue/Year/Type - Single muted line below authors */
+.article-container .article-metadata,
+.article-style .article-metadata,
+.article-style .pub-publication,
+.article-style [class*="metadata"] {
+  margin: 0 0 32px 0 !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: var(--text-secondary) !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.article-container .article-date {
+  color: var(--text-secondary) !important;
+  font-size: 16px !important;
+}
+
+.article-style .article-metadata dt,
+.article-style .article-metadata strong,
+.article-style .pub-publication strong {
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+  margin-right: 0 !important;
+}
+
+.article-style .article-metadata dd,
+.article-style .article-metadata span,
+.article-style .pub-publication span {
+  color: var(--text-secondary) !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+.article-style .article-metadata > div,
+.article-style .article-metadata > p {
+  margin-bottom: 4px !important;
+  display: inline !important;
+}
+
+.article-style .article-metadata > div:not(:last-child)::after {
+  content: " | ";
+  margin: 0 8px;
+  color: var(--text-secondary) !important;
+}
+
+/* Abstract Section - Labeled with clear spacing */
+.article-container h3,
+.article-style h2,
+.article-style h3 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  margin: 48px 0 16px 0 !important;
+  text-align: left !important;
+}
+
+/* Abstract text - clean typography with good spacing */
+.article-container .pub-abstract,
+.article-style .abstract,
+.article-style [class*="abstract"] {
+  font-size: 18px !important;
+  line-height: 1.85 !important;
+  color: var(--text-primary) !important;
+  margin: 0 0 48px 0 !important;
+  max-width: 100%;
+}
+
+/* Regular paragraphs (abstract content) */
+.article-style p {
+  font-size: 18px !important;
+  line-height: 1.85 !important;
+  color: var(--text-primary) !important;
+  margin: 0 0 24px 0 !important;
+  max-width: 100%;
+}
+
+.article-style p:first-of-type {
+  margin-top: 0;
+}
+
+.article-style p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Ensure proper spacing between all major sections */
+.article-style > * {
+  margin-top: 0;
+}
+
+.article-style h1 + * {
+  margin-top: 0;
+}
+
+.article-style .article-authors + * {
+  margin-top: 0;
+}
+
+.article-style .article-metadata + * {
+  margin-top: 0;
+}
+
+.article-style .abstract + *,
+.article-style [class*="abstract"] + * {
+  margin-top: 0;
+}
+
+/* Metadata rows - Compact, muted styling */
+.article-container .row {
+  margin: 0 0 16px 0 !important;
+}
+
+.article-container .pub-row-heading {
+  font-weight: 500 !important;
+  color: var(--text-secondary) !important;
+  font-size: 15px !important;
+}
+
+.article-container .pub-row-heading + div {
+  color: var(--text-secondary) !important;
+  font-size: 15px !important;
+}
+
+.article-container .pub-row-heading + div a {
+  color: var(--text-secondary) !important;
+}
+
+.article-container .pub-row-heading + div a:hover {
+  color: var(--accent-blue) !important;
+  text-decoration: underline !important;
+}
+
+/* Tags - Compact, muted styling */
+.article-container .article-tags,
+.article-style .article-tags,
+.article-style .tags,
+.article-style [class*="tag"] {
+  margin: 0 0 48px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.article-container .article-tags::before,
+.article-style .article-tags::before {
+  content: "Research Areas: ";
+  font-weight: 500;
+  color: var(--text-secondary) !important;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.article-container .article-tags .badge,
+.article-style .article-tags a,
+.article-style .tags a,
+.article-style [class*="tag"] a {
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 4px 0 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--text-secondary) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
+.article-container .article-tags .badge:not(:last-child)::after,
+.article-style .article-tags a:not(:last-child)::after {
+  content: ", ";
+  color: var(--text-secondary) !important;
+}
+
+.article-container .article-tags .badge:hover,
+.article-style .article-tags a:hover,
+.article-style .tags a:hover {
+  background: transparent !important;
+  color: var(--accent-blue) !important;
+  text-decoration: underline !important;
+  transform: none !important;
+}
+
+/* Action Links - Horizontal text links separated by pipes */
+.article-container .btn-links,
+.article-container [class*="btn"]:not(.btn-primary):not(.btn-secondary),
+.article-container .btn-group,
+.article-container .pub-links,
+.article-container [class*="link"],
+.article-style .btn-links,
+.article-style [class*="btn"],
+.article-style .btn-group,
+.article-style .pub-links,
+.article-style [class*="link"] {
+  margin: 0 0 48px 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0 !important;
+  align-items: center !important;
+}
+
+.article-container .btn-links a,
+.article-container [class*="btn"]:not(.btn-primary):not(.btn-secondary):not(.badge),
+.article-container .btn-group a,
+.article-container .pub-links a,
+.article-container [class*="link"] a,
+.article-style .btn-links a,
+.article-style [class*="btn"]:not(.btn-primary):not(.btn-secondary),
+.article-style .btn-group a,
+.article-style .pub-links a,
+.article-style [class*="link"] a {
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--accent-blue) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.article-container .btn-links a:not(:last-child)::after,
+.article-container [class*="btn"]:not(.btn-primary):not(.btn-secondary):not(.badge):not(:last-child)::after,
+.article-container .btn-group a:not(:last-child)::after,
+.article-style .btn-links a:not(:last-child)::after,
+.article-style [class*="btn"]:not(.btn-primary):not(.btn-secondary):not(:last-child)::after,
+.article-style .btn-group a:not(:last-child)::after {
+  content: " | ";
+  margin: 0 8px;
+  color: var(--text-secondary) !important;
+}
+
+.article-container .btn-links a:hover,
+.article-container [class*="btn"]:not(.btn-primary):not(.btn-secondary):not(.badge):hover,
+.article-container .btn-group a:hover,
+.article-container .pub-links a:hover,
+.article-container [class*="link"] a:hover,
+.article-style .btn-links a:hover,
+.article-style [class*="btn"]:not(.btn-primary):not(.btn-secondary):hover,
+.article-style .btn-group a:hover,
+.article-style .pub-links a:hover,
+.article-style [class*="link"] a:hover {
+  background: transparent !important;
+  color: #002244 !important;
+  text-decoration: underline !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Author Profiles - Optional, at bottom */
+.article-style .article-author-card,
+.article-style [class*="author-card"],
+.article-style .profile {
+  margin: 48px 0 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block !important;
+}
+
+.article-style .article-author-card img,
+.article-style [class*="author-card"] img,
+.article-style .profile img {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  margin-right: 16px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.article-style .article-author-card h3,
+.article-style [class*="author-card"] h3,
+.article-style .profile h3 {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin: 0 0 4px 0 !important;
+  display: inline-block !important;
+}
+
+.article-style .article-author-card p,
+.article-style [class*="author-card"] p,
+.article-style .profile p {
+  color: var(--text-secondary) !important;
+  font-size: 15px !important;
+  margin: 0 0 16px 0 !important;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article-container {
+    padding: 60px 20px !important;
+  }
+  
+  .article-container h1,
+  .article-style h1 {
+    font-size: clamp(1.75rem, 5vw, 2.25rem) !important;
+  }
+  
+  .article-container .btn-links,
+  .article-container [class*="btn"]:not(.btn-primary):not(.btn-secondary):not(.badge),
+  .article-container .btn-group,
+  .article-style .btn-links,
+  .article-style [class*="btn"],
+  .article-style .btn-group {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .article-container .btn-links a:not(:last-child)::after,
+  .article-container [class*="btn"]:not(.btn-primary):not(.btn-secondary):not(.badge):not(:last-child)::after,
+  .article-style .btn-links a:not(:last-child)::after,
+  .article-style [class*="btn"]:not(.btn-primary):not(.btn-secondary):not(:last-child)::after {
+    content: "" !important;
+    margin: 0 !important;
+  }
+}
+
+
+/* ============================================
+   7. UTILITY CLASSES
+   ============================================
+   Helper classes for backgrounds, text colors, borders
+   ============================================ */
+
+.bg-primary { background-color: var(--bg-primary) !important; }
+.bg-secondary { background-color: var(--bg-secondary) !important; }
+.bg-card { background-color: var(--card-bg) !important; }
+
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-muted { color: var(--text-secondary) !important; }
+
+.accent-blue { color: var(--accent-blue) !important; }
+
+.border-primary { border-color: var(--border-color) !important; }
+
+
+/* ============================================
+   8. ADDITIONAL COMPONENT STYLES
+   ============================================
+   People page and other component-specific styles
+   ============================================ */
+
+/* Principal Investigator - larger photo and font */
 .people-widget .portrait[data-src*="morteza-zihayat"] {
   width: 200px !important;
   height: 200px !important;
@@ -264,7 +1164,6 @@ hr, .hr-dotted, .rule {
   max-height: 200px !important;
 }
 
-/* Larger font for Principal Investigator name */
 .people-widget .portrait[data-src*="morteza-zihayat"] + .portrait-title h3 {
   font-size: 1.5em !important;
   font-weight: bold !important;
@@ -275,35 +1174,140 @@ hr, .hr-dotted, .rule {
   font-weight: 600 !important;
 }
 
-/* HCMI static hero */
+
+/* ============================================
+   9. LEGACY/UNUSED CLASSES
+   ============================================
+   These classes are not currently used in content/_index.md
+   but kept commented for potential future use
+   ============================================ */
+
+/* Announcement bar - UNUSED */
+/*
+.hcmi-topbar {
+  background:#f2cfc8; color:#1b1b1b;
+  display:flex; gap:16px; align-items:center; justify-content:center;
+  padding:10px 16px; font-size:14px; letter-spacing:.4px;
+}
+.hcmi-topbar-btn {
+  border:1px solid #1b1b1b; padding:6px 10px; background:#1b1b1b; color:#f2cfc8; font-size:12px;
+}
+*/
+
+/* Hero - UNUSED */
+/*
+.hcmi-hero { position: relative; overflow: hidden; padding-top: 48px; }
+.hcmi-hero .hero-title, .hcmi-hero h1 { font-size: clamp(32px, 5vw, 44px); margin-bottom: 12px; }
+.hcmi-hero .hero-lead, .hcmi-hero p { max-width: 720px; line-height: 1.8; }
+.hcmi-hero::after {
+  content:"";
+  position:absolute; inset:-10% -8% -10% 55%;
+  background:
+    radial-gradient(60% 60% at 60% 40%, rgba(255,255,255,.22), rgba(255,255,255,0) 60%),
+    radial-gradient(40% 50% at 80% 60%, rgba(255,255,255,.18), rgba(255,255,0) 60%),
+    linear-gradient(#000,#000);
+  mix-blend-mode:screen; pointer-events:none; filter: blur(1px) contrast(110%);
+}
+@media (max-width: 980px){ .hcmi-hero::after { display:none; } }
+*/
+
+/* Mission block - UNUSED */
+/*
+.hcmi-mission {
+  background:#fff; color:#1d1d1d;
+  display:grid; grid-template-columns: 160px 1fr 1fr; gap: 40px;
+  padding: 80px 24px 120px; max-width: 1200px; margin: 0 auto;
+}
+.hcmi-mission .label {
+  color:#9b4b3a; letter-spacing:2px; text-transform:lowercase; align-self:start;
+}
+.hcmi-mission .label::before {
+  content:"**************";
+  display:block; color:#9b4b3a; margin-bottom:10px; font-size:14px; letter-spacing:1.5px;
+}
+.hcmi-mission p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px; line-height: 1.7; color:#444; max-width: 46ch;
+}
+@media (max-width: 980px){
+  .hcmi-mission { grid-template-columns: 1fr; padding: 56px 20px 72px; }
+}
+*/
+
+/* Custom styling for smaller hero image - UNUSED */
+/*
+.hero-image-small .hero-media img {
+  max-width: 300px !important;
+  max-height: 200px !important;
+  width: auto !important;
+  height: auto !important;
+}
+.hero-image-small {
+  min-height: 1200px !important;
+}
+.hero-image-small .hero-media {
+  min-height: 1200px !important;
+}
+*/
+
+/* Fullscreen hero section styling - UNUSED (commented in content/_index.md) */
+/*
+.fullscreen {
+  min-height: 100vh;
+}
+*/
+
+/* Hero section with large title - UNUSED */
+/*
+.hero-large-title h1 {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 60px !important;
+  line-height: 1.2 !important;
+}
+.hero-large-title p {
+  font-size: 5rem !important;
+  line-height: 1.6 !important;
+  margin-top: 80px !important;
+}
+@media (max-width: 768px) {
+  .hero-large-title h1 {
+    font-size: 3rem !important;
+    margin-bottom: 40px !important;
+  }
+  .hero-large-title p {
+    font-size: 1.2rem !important;
+    margin-top: 30px !important;
+  }
+}
+*/
+
+/* HCMI static hero - UNUSED */
+/*
 .hcmi-hero-static {
   position: relative;
   padding: 64px 0 40px 0;
-  background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(13,27,42,1) 100%);
-  border-bottom: 1px solid var(--border-700);
+  background: var(--bg-primary) !important;
+  border-bottom: 1px solid var(--border-color);
 }
-
 .hcmi-hero-static .hero-title,
 .hcmi-hero-static h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  color: var(--text-100);
-  text-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+  letter-spacing: -0.01em;
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
   margin-bottom: 16px;
   font-size: clamp(36px, 5.2vw, 56px);
 }
-
 .hcmi-hero-static .hero-lead,
 .hcmi-hero-static p {
-  font-family: 'VT323', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: clamp(18px, 2.2vw, 20px);
-  line-height: 1.55;
-  color: var(--text-300);
+  line-height: 1.7;
+  color: var(--text-primary) !important;
   max-width: 720px;
 }
-
-/* Right-side image sizing */
 .hcmi-hero-static .hero-media img {
   max-width: 420px;
   width: 100%;
@@ -311,8 +1315,6 @@ hr, .hr-dotted, .rule {
   display: block;
   filter: drop-shadow(0 0 18px rgba(0,255,255,0.25));
 }
-
-/* Optional accent baseline under title */
 .hcmi-hero-static .hero-title::after {
   content: "";
   display: block;
@@ -321,8 +1323,6 @@ hr, .hr-dotted, .rule {
   margin-top: 12px;
   background: linear-gradient(90deg, var(--accent-1), transparent);
 }
-
-/* Responsive tweak for narrow screens */
 @media (max-width: 900px) {
   .hcmi-hero-static {
     padding: 40px 0 28px 0;
@@ -332,54 +1332,4 @@ hr, .hr-dotted, .rule {
     margin-top: 16px;
   }
 }
-
-/* HCMI static hero */
-.hcmi-hero-static {
-  position: relative;
-  padding: 64px 0 40px 0;
-  background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(13,27,42,1) 100%);
-  border-bottom: 1px solid var(--border-700);
-}
-
-.hcmi-hero-static .hero-title,
-.hcmi-hero-static h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: var(--text-100);
-  text-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
-  margin-bottom: 16px;
-  font-size: clamp(36px, 5.2vw, 56px);
-}
-
-.hcmi-hero-static .hero-lead,
-.hcmi-hero-static p {
-  font-family: 'VT323', monospace;
-  font-size: clamp(18px, 2.2vw, 20px);
-  line-height: 1.55;
-  color: var(--text-300);
-  max-width: 720px;
-}
-
-/* Right-side image sizing */
-.hcmi-hero-static .hero-media img {
-  max-width: 420px;
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 0 18px rgba(0,255,255,0.25));
-}
-
-/* Optional accent baseline under title */
-.hcmi-hero-static .hero-title::after {
-  content: "";
-  display: block;
-  width: 88px;
-  height: 2px;
-  margin-top: 12px;
-  background: linear-gradient(90deg, var(--accent-1), transparent);
-}
-
-
-
-
+*/
