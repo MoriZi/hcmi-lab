@@ -51,3 +51,8 @@ temp/
 # Large media files
 *.gif
 *.mp4
+
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc

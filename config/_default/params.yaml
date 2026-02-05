@@ -6,8 +6,8 @@
 # Appearance
 
 appearance:
-  theme_day: false
-  theme_night:
+  theme_day: auto
+  theme_night: auto
   font: native
   font_size: XL
 
@@ -35,10 +35,10 @@ header:
   navbar:
     enable: true
     align: r
-    show_logo: true
+    show_logo: false
     logo: "hcmiLogo.png"
     show_language: false
-    show_day_night: true
+    show_day_night: false
     show_search: true
     highlight_active_link: false
 

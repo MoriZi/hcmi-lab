@@ -265,14 +265,25 @@ a:hover {
 .navbar-brand {
   font-size: 0.95rem !important;
   font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
 }
 
 .navbar-brand img {
   display: inline-block !important;
-  max-height: 40px !important;
+  max-height: 150px !important;
+  height: 150px !important;
   width: auto !important;
-  margin-right: 8px !important;
+  margin-right: 20px !important;
   vertical-align: middle !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: high-quality !important;
+  -ms-interpolation-mode: nearest-neighbor !important;
+  object-fit: contain !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  transform: translateZ(0) !important;
 }
 
 .nav-link, .navbar-brand {

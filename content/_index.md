@@ -42,7 +42,7 @@ sections:
         <div class="home-identity-container">
           <div class="home-identity-text">
             <h1>HCMI<br>Lab</h1>
-            <p>The Human Centered Machine Intelligence Lab is dedicated to shaping AI systems that are ethical, fair, and accountable. Our vision is to advance research in fairness-aware information retrieval, human-compatible AI, and trustworthy infrastructures that align intelligent technologies with human values and the public good.</p>
+            <p>The Human-Centered Machine Intelligence Lab is a research lab focused on advancing AI and machine learning systems that are fair, transparent, and aligned with human values.</p>
           </div>
           <div class="home-identity-image">
             <img src="media/hero-image.jpg" alt="HCMI Lab" class="hero-image">

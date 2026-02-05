@@ -1,1 +1,22 @@
 {{ partial "favicon.html" . }}
+<script>
+  // Remove logo images from navbar
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find all navbar-brand elements
+    const navbarBrands = document.querySelectorAll('.navbar-brand');
+    
+    navbarBrands.forEach(function(brand) {
+      // Remove any existing images
+      const existingImgs = brand.querySelectorAll('img');
+      existingImgs.forEach(function(img) {
+        img.remove();
+      });
+    });
+    
+    // Also remove any icon_hu_ images in the navbar
+    const navbarImgs = document.querySelectorAll('.navbar img[src*="icon_hu_"]');
+    navbarImgs.forEach(function(img) {
+      img.remove();
+    });
+  });
+</script>

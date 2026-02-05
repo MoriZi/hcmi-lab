@@ -1,17 +1,29 @@
 {{ $current_page := . }}
+{{/* Check both config paths for logo */}}
+{{ $showLogo := false }}
+{{ $logoFile := "" }}
+{{ if .Site.Params.header.navbar.show_logo }}
+  {{ $showLogo = true }}
+  {{ $logoFile = .Site.Params.header.navbar.logo }}
+{{ else if .Site.Params.navbar.show_logo }}
+  {{ $showLogo = true }}
+  {{ $logoFile = .Site.Params.navbar.logo }}
+{{ end }}
+
 <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom {{ if .Site.Params.navbar.background }}navbar-{{ .Site.Params.navbar.background }}{{ end }}">
   <div class="container">
     {{/* Brand */}}
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">
-          {{ if .Site.Params.navbar.show_logo }}
-      {{ if .Site.Params.navbar.logo }}
-        <img src="{{ "images/" | relURL }}{{ .Site.Params.navbar.logo }}" alt="{{ .Site.Title }}" height="40">
+      {{ if $showLogo }}
+        {{ if $logoFile }}
+          {{ $logoPath := printf "images/%s" $logoFile | absURL }}
+          <img src="{{ $logoPath }}?v=2" alt="{{ .Site.Title }}" height="40">
+        {{ else }}
+          {{ .Site.Title }}
+        {{ end }}
       {{ else }}
         {{ .Site.Title }}
       {{ end }}
-    {{ else }}
-      {{ .Site.Title }}
-    {{ end }}
     </a>
 
     {{/* Navbar toggler */}}

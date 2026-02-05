@@ -1,11 +1,11 @@
 # 🚀 Manual Deployment Guide for HCMI Website
 
-This guide explains how to deploy the HCMI website to the server using SFTP.
+This guide explains how to deploy the HCMI website to the server using rsync (recommended) or SFTP.
 
 ## Prerequisites
 
 - Hugo installed locally
-- SFTP access to the server
+- SSH/rsync access to the server
 - TMU account credentials
 
 ## Deployment Steps
@@ -18,7 +18,35 @@ hugo
 
 This generates the site in the `public/` folder.
 
-### 2. Connect to the server via SFTP
+### 2. Deploy using rsync (Recommended)
+
+```bash
+rsync -avz --delete public/ yourusername@pascal.ee.torontomu.ca:/home/courses/hcmi/
+```
+
+Replace `yourusername` with your TMU account username.
+
+**What this does:**
+- `-a`: Archive mode (preserves permissions, timestamps, etc.)
+- `-v`: Verbose output
+- `-z`: Compress data during transfer
+- `--delete`: Removes files on the server that don't exist locally (keeps the site in sync)
+- `public/`: Source directory (trailing slash copies contents, not the folder itself)
+- `/home/courses/hcmi/`: Destination directory on the server
+
+**Optional: Dry run to preview changes**
+
+```bash
+rsync -avz --delete --dry-run public/ yourusername@pascal.ee.torontomu.ca:/home/courses/hcmi/
+```
+
+---
+
+## Alternative: Deploy using SFTP
+
+If rsync is not available, you can use SFTP:
+
+### 1. Connect to the server via SFTP
 
 ```bash
 sftp yourusername@pascal.ee.torontomu.ca
@@ -26,13 +54,13 @@ sftp yourusername@pascal.ee.torontomu.ca
 
 Replace `yourusername` with your TMU account username.
 
-### 3. Change into the web directory
+### 2. Change into the web directory
 
 ```bash
 cd /home/courses/hcmi
 ```
 
-### 4. Remove all old files
+### 3. Remove all old files
 
 ```bash
 rm -r *
@@ -40,7 +68,7 @@ rm -r *
 
 ⚠️ **Warning**: This clears the existing site to avoid stale files.
 
-### 5. Upload the new build
+### 4. Upload the new build
 
 From inside the SFTP session:
 
@@ -50,7 +78,7 @@ put -r public/*
 
 This copies everything from your local `public/` folder to the server.
 
-### 6. Exit SFTP
+### 5. Exit SFTP
 
 ```bash
 bye
@@ -103,5 +131,5 @@ After deployment, your server should contain:
 
 ---
 
-**Last updated**: September 2024
+**Last updated**: February 2025
 **Maintainer**: HCMI Lab
