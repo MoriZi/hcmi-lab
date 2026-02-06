@@ -5,26 +5,27 @@ avatar:
   caption: Dr. Ebrahim Bagheri
 role: Affiliated Faculty
 organizations:
-  - name: University of Toronto
-    url: https://www.utoronto.ca/
-bio: Dr. Ebrahim Bagheri is an Associate Professor at the University of Toronto and an affiliated faculty member of the Human-Centered Machine Intelligence Lab. His research focuses on natural language processing, information retrieval, and machine learning.
+- name: University of Toronto
+  url: https://www.utoronto.ca/
+bio: Dr. Ebrahim Bagheri is an Associate Professor at the University of Toronto and
+  an affiliated faculty member of the Human-Centered Machine Intelligence Lab. His
+  research focuses on natural language processing, information retrieval, and machine
+  learning.
 interests:
-  - Natural Language Processing
-  - Information Retrieval
-  - Machine Learning
-  - Text Mining
-
+- Natural Language Processing
+- Information Retrieval
+- Machine Learning
+- Text Mining
 social:
-  - icon: google-scholar
-    icon_pack: ai
-    link: "#"
-  - icon: linkedin
-    icon_pack: fab
-    link: "#"
-
-email: "ebrahim.bagheri@utoronto.ca"
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=mG0H8oYAAAAJ&hl=en
+- icon: linkedin
+  icon_pack: fab
+  link: https://ca.linkedin.com/in/ebrahim-bagheri-6330841
+email: ebrahim.bagheri@utoronto.ca
 highlight_name: true
 weight: 1
 user_groups:
-  - Faculty
+- Faculty
 ---

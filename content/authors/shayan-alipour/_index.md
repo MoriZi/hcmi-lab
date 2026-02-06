@@ -1,49 +1,30 @@
 ---
-# Display name
 title: Shayan Alipour
-
-# Is this the primary user of the site?
 superuser: false
-
-# Role/position
 role: Postdoc
 organizations:
-  - name: Toronto Metropolitan University
-    url: https://www.torontomu.ca/
-
-# Short bio (displayed in user profile at end of posts)
-bio: Shayan Alipour is a Postdoctoral Researcher in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science.
-
-# Interests to show in About widget
+- name: Toronto Metropolitan University
+  url: https://www.torontomu.ca/
+bio: Shayan Alipour is a Postdoctoral Researcher in the Human-Centered Machine Intelligence
+  Lab, working on research projects in machine learning and data science.
 interests:
-  - Machine Learning
-  - Data Science
-  - Artificial Intelligence
-  - Pattern Recognition
-  - Deep Learning
-
-
-# Social/Academic Networking
+- Machine Learning
+- Data Science
+- Artificial Intelligence
+- Pattern Recognition
+- Deep Learning
 social:
-  - icon: google-scholar
-    icon_pack: ai
-    link: "#"
-  - icon: linkedin
-    icon_pack: fab
-    link: "#"
-
-# Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "shayan.alipour@torontomu.ca"
-
-# Highlight the author in author lists? (true/false)
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=ex9m4ksAAAAJ&hl=en
+- icon: linkedin
+  icon_pack: fab
+  link: https://ca.linkedin.com/in/shayanalip
+email: shayan.alipour@torontomu.ca
 highlight_name: false
-
-# Weight for ordering
 weight: 1
-
-# Organizational groups that you belong to (for People widget)
 user_groups:
-  - Researchers
+- Researchers
 ---
 
 Shayan Alipour is a Postdoctoral Researcher in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science. His research focuses on developing innovative approaches to pattern recognition and deep learning.
