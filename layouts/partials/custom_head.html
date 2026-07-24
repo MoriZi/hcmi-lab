@@ -1,0 +1,76 @@
+<!-- HCMI Join page: application-email prompt + copy-to-clipboard -->
+<script>
+  window.HCMI_PROMPT = `You are helping me write a concise, high-signal application email to Dr. Morteza Zihayat, Director of the Human-Centered Machine Intelligence (HCMI) Lab at Toronto Metropolitan University. I will paste my CV at the end.
+
+Using ONLY the information in my CV (do not invent anything — where something important is missing, insert a [bracketed placeholder] for me to complete), write an application email in EXACTLY the format below.
+
+SUBJECT LINE:
+Prospective (PhD or MASc) Student | [My Full Name] | [My primary research interest]
+
+EMAIL BODY — use these labeled sections, in this order, and nothing else:
+
+1. Introduction — two sentences: who I am, my current or most recent degree, my institution, and my GPA if it appears in the CV.
+
+2. Why the HCMI Lab — name the one or two HCMI research areas that best match my background (choose from: Human-Centered AI, Responsible AI, Fair Machine Learning, Information Retrieval, Neural Ranking, Retrieval-Augmented Generation, Large Language Models, Graph Neural Networks, Knowledge Graphs, Data Mining, Explainable AI, AI for Healthcare, Decentralized AI). Then add two lines for me to complete:
+   Paper I read: [title of an HCMI Lab paper]
+   What interested me / a question I would explore: [1-2 sentences]
+
+3. Research experience — up to four bullet points. Each bullet must be concrete: what I did, the methods or tools I used, and the outcome.
+
+4. Publications — list each as: Title — Venue (Year) — my role. Omit this whole section if I have no publications.
+
+5. Technical skills — the programming languages and ML frameworks that actually appear in my CV (e.g., Python, PyTorch, TensorFlow, Hugging Face, SQL, Git, Linux).
+
+6. Mathematical background — relevant courses or skills (e.g., linear algebra, probability, optimization, statistics).
+
+7. Awards, scholarships and funding — any awards or scholarships, and whether I currently hold or am applying for external funding (NSERC, Vanier, OGS, Mitacs, etc.). Omit if none.
+
+8. Attachments — one line stating what I will attach: CV, academic transcripts, a writing sample, and optionally my GitHub, Google Scholar, and personal website.
+
+RULES:
+- Keep the whole email under 250 words.
+- Be specific and factual; no generic filler, no flattery.
+- Professional, direct tone.
+- Do not claim any skill, result, or publication that is not in my CV.
+- Preserve every [bracketed placeholder] so I can review and complete it before sending.
+
+MY CV:
+[paste your CV here]`;
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var el = document.getElementById('hcmiPromptText');
+    if (el) { el.textContent = window.HCMI_PROMPT; }
+  });
+
+  window.hcmiCopyPrompt = function (btn) {
+    var text = window.HCMI_PROMPT;
+    function done() {
+      if (!btn) return;
+      var original = btn.getAttribute('data-label') || btn.textContent;
+      btn.setAttribute('data-label', original);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function () {
+        btn.textContent = btn.getAttribute('data-label') || 'Copy prompt';
+        btn.classList.remove('copied');
+      }, 2000);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(fallback);
+    } else {
+      fallback();
+    }
+  };
+</script>

@@ -6,13 +6,13 @@ title: Lingling Zhang
 superuser: false
 
 # Role/position
-role: PhD Student
+role: Research Assistant
 organizations:
   - name: Toronto Metropolitan University
     url: https://www.torontomu.ca/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Lingling Zhang is a PhD student in the Human-Centered Machine Intelligence Lab, working on privacy-first cloud resource prediction.
+bio: Lingling Zhang is a Research Assistant in the Human-Centered Machine Intelligence Lab, working on privacy-first cloud resource prediction.
 
 # Interests to show in About widget
 interests:
@@ -39,11 +39,11 @@ email: "lingling.zhang@torontomu.ca"
 highlight_name: false
 
 # Weight for ordering
-weight: 2
+weight: 8
 
 # Organizational groups that you belong to (for People widget)
 user_groups:
   - Researchers
 ---
 
-Lingling Zhang is a PhD student in the Human-Centered Machine Intelligence Lab, working on privacy-first cloud resource prediction. Her research focuses on developing privacy-preserving machine learning techniques for cloud computing environments.
+Lingling Zhang is a Research Assistant in the Human-Centered Machine Intelligence Lab, working on privacy-first cloud resource prediction. Her research focuses on developing privacy-preserving machine learning techniques for cloud computing environments.

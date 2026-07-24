@@ -22,7 +22,7 @@ social:
   link: https://www.linkedin.com/in/haisonle01/
 email: hai.son.le@torontomu.ca
 highlight_name: false
-weight: 4
+weight: 5
 user_groups:
 - Researchers
 ---

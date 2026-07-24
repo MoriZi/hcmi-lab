@@ -35,8 +35,8 @@
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav ms-auto">
         {{ range .Site.Menus.main }}
-          <li class="nav-item">
-            <a class="nav-link {{ if $current_page.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
+          <li class="nav-item{{ if .Params.cta }} nav-item-cta{{ end }}">
+            <a class="nav-link{{ if .Params.cta }} nav-cta{{ end }} {{ if $current_page.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
           </li>
         {{ end }}
       </ul>

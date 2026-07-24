@@ -22,7 +22,7 @@ social:
   link: https://www.linkedin.com/in/mhoseyny/
 email: mohammad.hosseini@torontomu.ca
 highlight_name: false
-weight: 5
+weight: 6
 user_groups:
 - Researchers
 ---

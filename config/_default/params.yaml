@@ -35,7 +35,7 @@ header:
   navbar:
     enable: true
     align: r
-    show_logo: false
+    show_logo: true
     logo: "hcmiLogo.png"
     show_language: false
     show_day_night: false

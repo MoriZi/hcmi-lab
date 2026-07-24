@@ -22,7 +22,7 @@ social:
   link: https://www.linkedin.com/in/minasoltangheis/
 email: mina.soltangheis@torontomu.ca
 highlight_name: true
-weight: 3
+weight: 2
 user_groups:
 - Researchers
 ---

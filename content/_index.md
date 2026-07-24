@@ -62,6 +62,34 @@ sections:
       title: "Latest News"
       text: |
         <div class="news-puzzle-container">
+          <div class="news-card news-card-large news-card-join">
+            <h3>🚀 We're Hiring — Join the HCMI Lab</h3>
+            <p>We are actively recruiting motivated PhD, MASc, MEng, undergraduate, visiting, and postdoctoral researchers passionate about trustworthy, responsible, and human-centered AI. Explore openings, research areas, and how to apply.</p>
+            <div class="read-more-sec">
+              <a href="/join/" class="arrow">See Openings &amp; How to Apply</a>
+            </div>
+          </div>
+          <div class="news-card news-card-small">
+            <h3>Accepted in SIGIR 2026</h3>
+            <p>Our paper on "Failing Forward: Understanding Query Failure in Retrieval, Judgment, and Generation" by Seyed Mohammad Hosseini, Negar Arabzadeh, Mohammad Hossein Saliminabi, Dimitrios Androutsos, Morteza Zihayat, and Ebrahim Bagheri has been accepted at SIGIR 2026 (Top-tier conference in Information Retrieval).</p>
+            <div class="read-more-sec">
+              <a href="/publication/failing-forward-query-failure-retrieval-judgment-generation/" class="arrow">Read More</a>
+            </div>
+          </div>
+          <div class="news-card news-card-small">
+            <h3>Published in Machine Learning</h3>
+            <p>Our paper on "A Regularization Framework for Gender Bias Mitigation in Dense Neural Rankers" by Shirin Seyedsalehi, Morteza Zihayat, and Ebrahim Bagheri has been published in the Machine Learning journal.</p>
+            <div class="read-more-sec">
+              <a href="/publication/regularization-framework-gender-bias-mitigation-dense-neural-rankers/" class="arrow">Read More</a>
+            </div>
+          </div>
+          <div class="news-card news-card-small">
+            <h3>New Paper: Led to Mislead</h3>
+            <p>Our recent paper on "Led to Mislead: Adversarial Content Injection for Attacks on Neural Ranking Models" by Amin Bigdeli, Amir Khosrojerdi, Radin Hamidi Rad, Morteza Zihayat, Charles L. A. Clarke, and Ebrahim Bagheri has been published on arXiv.</p>
+            <div class="read-more-sec">
+              <a href="/publication/led-to-mislead-adversarial-content-injection-neural-ranking-models/" class="arrow">Read More</a>
+            </div>
+          </div>
           <div class="news-card news-card-small">
             <h3>Accepted in WSDM 2026</h3>
             <p>Our paper on "Self-Paced Fair Ranking with Loss as a Proxy for Bias" by Hai Son Le, Shirin Seyedsalehi, Morteza Zihayat, and Ebrahim Bagheri has been accepted at WSDM 2026.</p>
@@ -88,34 +116,6 @@ sections:
             <p>Our paper on "Decentralized in Name Only: The Centralization of DAO Labor" by Lingling Zhang, Morteza Zihayat, and Ebrahim Bagheri has been accepted at WWW 2026.</p>
             <div class="read-more-sec">
               <a href="/publication/decentralized-in-name-only-centralization-dao-labor/" class="arrow">Read More</a>
-            </div>
-          </div>
-          <div class="news-card news-card-large">
-            <h3>Accepted in WWW 2026</h3>
-            <p>Our paper on "Graph Poisoning for Node Rank Manipulation" by Seyed Mohammad Hosseini, Radin Hamidi Rad, Morteza Zihayat, and Ebrahim Bagheri has been accepted at WWW 2026, investigating graph poisoning attacks designed to manipulate node rankings.</p>
-            <div class="read-more-sec">
-              <a href="/publication/graph-poisoning-node-rank-manipulation/" class="arrow">Read More</a>
-            </div>
-          </div>
-          <div class="news-card news-card-small">
-            <h3>Accepted in CIKM 2025</h3>
-            <p>Our paper on "LLM-as-a-Judge in Entity Retrieval: Assessing Explicit and Implicit Relevance" by Mohammad Hossein Saliminabi, Negar Arabzadeh, Seyed Mohammad Hosseini, Dimitrios Androutsos, Morteza Zihayat, and Ebrahim Bagheri has been accepted at CIKM 2025.</p>
-            <div class="read-more-sec">
-              <a href="/publication/llm-as-a-judge-entity-retrieval/" class="arrow">Read More</a>
-            </div>
-          </div>
-          <div class="news-card news-card-small">
-            <h3>Accepted in CIKM 2025</h3>
-            <p>Our paper on "Datasets for Supervised Adversarial Attacks on Neural Rankers" by Amir Khosrojerdi, Amin Bigdeli, Radin Hamidi Rad, Morteza Zihayat, Charles LA Clarke, and Ebrahim Bagheri has been accepted at CIKM 2025.</p>
-            <div class="read-more-sec">
-              <a href="/publication/datasets-supervised-adversarial-attacks-neural-rankers/" class="arrow">Read More</a>
-            </div>
-          </div>
-          <div class="news-card news-card-small">
-            <h3>New Paper: The Gray Area</h3>
-            <p>Our recent paper on "The Gray Area: Characterizing Moderator Disagreement on Reddit" by Shayan Alipour, Shruti Phadke, Seyed Shahabeddin Mousavi, Amirhossein Afsharrad, Morteza Zihayat, and Mattia Samory has been published on arXiv.</p>
-            <div class="read-more-sec">
-              <a href="/publication/gray-area-characterizing-moderator-disagreement-reddit/" class="arrow">Read More</a>
             </div>
           </div>
         </div>

@@ -1,0 +1,39 @@
+name: Build check
+
+# Verifies the site builds cleanly on every push / PR to main.
+# It does NOT deploy — the TMU production server requires interactive MFA,
+# so deployment is done locally with ./deploy.sh.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build site with Hugo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (with theme submodule)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Set up Go (Hugo Modules)
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Set up Hugo (extended)
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.135.0'
+          extended: true
+
+      - name: Build
+        run: hugo --gc --minify --baseURL "http://hcmi.ee.torontomu.ca/"
