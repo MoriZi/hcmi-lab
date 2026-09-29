@@ -1,0 +1,11 @@
+{{- $names := slice -}}
+{{- range .Params.authors -}}
+  {{- $raw := . | string -}}
+  {{- $name := $raw -}}
+  {{- $page := site.GetPage (printf "/authors/%s" ($raw | urlize)) -}}
+  {{- if $page -}}
+    {{- $name = $page.Title -}}
+  {{- end -}}
+  {{- $names = $names | append $name -}}
+{{- end -}}
+{{- return (delimit $names ", ") -}}

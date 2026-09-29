@@ -16,13 +16,11 @@ bio: Dr. Morteza Zihayat is a Canada Research Chair (CRC) in Human-Centered AI a
   Centre for Advanced Studies. He is the Director of the Human-Centered Machine Intelligence
   Lab.
 interests:
-- Artificial Intelligence and Machine Learning
-- Representation Learning
-- Ranking and Retrieval Models
-- Graph-based Learning
-- Fairness and Responsible AI
-- Large-scale Data-driven Systems
+- My research focuses on human-centered machine intelligence, with an emphasis on how human values, behaviors and social context can inform the design, development and evaluation of intelligent systems.
 social:
+- icon: envelope
+  icon_pack: fas
+  link: mailto:zihayatm@gmail.com
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=lZ8oEM8AAAAJ&hl=en

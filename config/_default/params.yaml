@@ -49,9 +49,9 @@ favicon: '/images/hcmiLogo.png'
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} HCMI Lab, Toronto Metropolitan University.'
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
       share_alike: true
       allow_commercial: false

@@ -1,0 +1,248 @@
+{{- define "main" -}}
+{{- $pages := .RegularPages.ByDate.Reverse -}}
+{{- $featured := where $pages "Params.featured" true -}}
+{{- $featured = sort $featured "Params.featured_rank" "asc" -}}
+{{- if lt (len $featured) 1 -}}
+  {{- $featured = first 5 $pages -}}
+{{- end -}}
+{{- $years := slice -}}
+{{- $types := slice -}}
+{{- $authors := slice -}}
+{{- range $pages -}}
+  {{- $years = $years | append (.Date.Format "2006") -}}
+  {{- $types = $types | append (partial "hcmi/pub_type.html" .) -}}
+  {{- range .Params.authors -}}
+    {{- $raw := . | string -}}
+    {{- $name := $raw -}}
+    {{- with site.GetPage (printf "/authors/%s" ($raw | urlize)) -}}
+      {{- $name = .Title -}}
+    {{- end -}}
+    {{- $authors = $authors | append $name -}}
+  {{- end -}}
+{{- end -}}
+{{- $years = sort (uniq $years) "value" "desc" -}}
+{{- $types = sort (uniq $types) -}}
+{{- $authors = sort (uniq $authors) -}}
+
+<div class="pubs-page">
+  <section class="pubs-hero">
+    <div class="pubs-wrap pubs-hero-grid">
+      <div class="pubs-hero-copy">
+        <p class="pubs-kicker">Research output <span>/</span> HCMI</p>
+        <h1>Publications</h1>
+        <p class="pubs-lead">Explore our latest research papers on human-centered AI, machine learning, and their applications in real-world settings.</p>
+      </div>
+      <div class="pubs-hero-visual" aria-hidden="true">
+        <img src="{{ "media/publications-hero.png" | relURL }}" alt="">
+      </div>
+      <div class="pubs-hero-aside" aria-hidden="true">
+        <span>Better<br>AI<br>for<br>people</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="pubs-toolbar-section">
+    <div class="pubs-wrap">
+      <div class="pubs-toolbar">
+        <label class="pubs-search">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input id="pubs-search" type="search" placeholder="Search publications..." autocomplete="off" spellcheck="false">
+        </label>
+        <select id="pubs-year" aria-label="Filter by year">
+          <option value="">Year</option>
+          {{- range $years -}}
+          <option value="{{ . }}">{{ . }}</option>
+          {{- end -}}
+        </select>
+        <select id="pubs-type" aria-label="Filter by type">
+          <option value="">Type</option>
+          {{- range $types -}}
+          <option value="{{ . }}">{{ . }}</option>
+          {{- end -}}
+        </select>
+        <select id="pubs-author" aria-label="Filter by author">
+          <option value="">Author</option>
+          {{- range $authors -}}
+          <option value="{{ . }}">{{ . }}</option>
+          {{- end -}}
+        </select>
+        <button type="button" class="pubs-clear" id="pubs-clear">Clear all</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="pubs-featured-section" id="pubs-featured-section">
+    <div class="pubs-wrap">
+      <p class="pubs-section-label"><span aria-hidden="true">★</span> Featured publications</p>
+      <div class="pubs-featured-grid" id="pubs-featured-grid">
+        {{- range $index, $item := $featured -}}
+          {{- $type := partial "hcmi/pub_type.html" $item -}}
+          {{- $authorsLine := partial "hcmi/pub_authors.html" $item -}}
+          {{- $venue := $item.Params.publication | default "" -}}
+          {{- $url := $item.RelPermalink -}}
+          {{- with $item.Params.url_pdf }}{{ $url = . }}{{ end -}}
+          <article class="pubs-card js-pub" data-year="{{ $item.Date.Format `2006` }}" data-type="{{ $type }}" data-authors="{{ $authorsLine | lower }}" data-search="{{ printf `%s %s %s %s` $item.Title $authorsLine $venue ($item.Date.Format `2006`) | lower }}">
+            <div class="pubs-card-top">
+              <p class="pubs-card-meta">{{ $item.Date.Format "2006" }} <span>/</span> {{ $type }}</p>
+              <a class="pubs-card-ext" href="{{ $url }}" aria-label="Open paper">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>
+              </a>
+            </div>
+            <h3><a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a></h3>
+            <p class="pubs-card-authors">{{ $authorsLine }}</p>
+            <p class="pubs-card-venue">{{ $venue }}</p>
+            <div class="pubs-card-art">
+              {{ partial "hcmi/pub_art.html" $index }}
+            </div>
+            <a class="pubs-card-link" href="{{ $item.RelPermalink }}">View paper <span aria-hidden="true">→</span></a>
+          </article>
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  <section class="pubs-list-section">
+    <div class="pubs-wrap">
+      <div class="pubs-list-head">
+        <p class="pubs-section-label">All publications</p>
+        <label class="pubs-sort">
+          Sort by:
+          <select id="pubs-sort" aria-label="Sort publications">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="title">Title</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="pubs-list" id="pubs-list">
+        {{- range $pages -}}
+          {{- $type := partial "hcmi/pub_type.html" . -}}
+          {{- $authorsLine := partial "hcmi/pub_authors.html" . -}}
+          {{- $venue := .Params.publication | default "" -}}
+          {{- $venueShort := .Params.publication_short | default $venue -}}
+          <article class="pubs-row js-pub" data-year="{{ .Date.Format `2006` }}" data-type="{{ $type }}" data-authors="{{ $authorsLine | lower }}" data-title="{{ .Title | lower }}" data-date="{{ .Date.Format `2006-01-02` }}" data-search="{{ printf `%s %s %s %s` .Title $authorsLine $venue (.Date.Format `2006`) | lower }}">
+            <div class="pubs-row-year">
+              <span>{{ .Date.Format "2006" }}</span>
+              <span class="pubs-row-type">{{ $type }}</span>
+            </div>
+            <div class="pubs-row-main">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <p class="pubs-row-authors">{{ $authorsLine }}</p>
+              <p class="pubs-row-venue">{{ $venue }}</p>
+            </div>
+            <dl class="pubs-row-meta">
+              <div><dt>Year</dt><dd>{{ .Date.Format "2006" }}</dd></div>
+              <div><dt>Type</dt><dd>{{ $type }}</dd></div>
+              <div><dt>Venue</dt><dd>{{ $venueShort }}</dd></div>
+            </dl>
+            <a class="pubs-row-arrow" href="{{ .RelPermalink }}" aria-label="View {{ .Title }}">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </article>
+        {{- end -}}
+      </div>
+
+      <p class="pubs-empty" id="pubs-empty" hidden>No publications match these filters.</p>
+
+      <div class="pubs-more-wrap">
+        <button type="button" class="pubs-more" id="pubs-more">Show more publications <span aria-hidden="true">▾</span></button>
+        <span class="pubs-more-count" id="pubs-more-count"></span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  var searchEl = document.getElementById('pubs-search');
+  var yearEl = document.getElementById('pubs-year');
+  var typeEl = document.getElementById('pubs-type');
+  var authorEl = document.getElementById('pubs-author');
+  var sortEl = document.getElementById('pubs-sort');
+  var clearEl = document.getElementById('pubs-clear');
+  var moreEl = document.getElementById('pubs-more');
+  var moreCountEl = document.getElementById('pubs-more-count');
+  var emptyEl = document.getElementById('pubs-empty');
+  var featuredSection = document.getElementById('pubs-featured-section');
+  var list = document.getElementById('pubs-list');
+  var featuredCards = Array.prototype.slice.call(document.querySelectorAll('#pubs-featured-grid .js-pub'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#pubs-list .js-pub'));
+  var pageSize = 9;
+  var visible = pageSize;
+
+  function matches(el) {
+    var q = (searchEl.value || '').trim().toLowerCase();
+    var year = yearEl.value;
+    var type = typeEl.value;
+    var author = (authorEl.value || '').toLowerCase();
+    if (year && el.getAttribute('data-year') !== year) return false;
+    if (type && el.getAttribute('data-type') !== type) return false;
+    if (author && (el.getAttribute('data-authors') || '').indexOf(author) === -1) return false;
+    if (q && (el.getAttribute('data-search') || '').indexOf(q) === -1) return false;
+    return true;
+  }
+
+  function sortRows() {
+    var mode = sortEl.value;
+    var sorted = rows.slice().sort(function (a, b) {
+      if (mode === 'oldest') return (a.getAttribute('data-date') || '').localeCompare(b.getAttribute('data-date') || '');
+      if (mode === 'title') return (a.getAttribute('data-title') || '').localeCompare(b.getAttribute('data-title') || '');
+      return (b.getAttribute('data-date') || '').localeCompare(a.getAttribute('data-date') || '');
+    });
+    sorted.forEach(function (row) { list.appendChild(row); });
+    rows = sorted;
+  }
+
+  function render() {
+    var featuredVisible = 0;
+    featuredCards.forEach(function (card) {
+      var show = matches(card);
+      card.hidden = !show;
+      if (show) featuredVisible += 1;
+    });
+    if (featuredSection) featuredSection.hidden = featuredVisible === 0;
+
+    var matched = [];
+    rows.forEach(function (row) {
+      if (matches(row)) matched.push(row);
+      else row.hidden = true;
+    });
+    matched.forEach(function (row, i) {
+      row.hidden = i >= visible;
+    });
+    emptyEl.hidden = matched.length > 0;
+    var remaining = Math.max(matched.length - visible, 0);
+    moreEl.hidden = remaining === 0;
+    moreCountEl.textContent = remaining ? ('+ ' + remaining + ' more') : '';
+  }
+
+  function resetVisible() { visible = pageSize; }
+
+  ['input', 'change'].forEach(function (evt) {
+    searchEl.addEventListener(evt, function () { resetVisible(); render(); });
+  });
+  [yearEl, typeEl, authorEl].forEach(function (el) {
+    el.addEventListener('change', function () { resetVisible(); render(); });
+  });
+  sortEl.addEventListener('change', function () { sortRows(); render(); });
+  clearEl.addEventListener('click', function () {
+    searchEl.value = '';
+    yearEl.value = '';
+    typeEl.value = '';
+    authorEl.value = '';
+    sortEl.value = 'newest';
+    resetVisible();
+    sortRows();
+    render();
+  });
+  moreEl.addEventListener('click', function () {
+    visible += pageSize;
+    render();
+  });
+
+  sortRows();
+  render();
+})();
+</script>
+{{- end -}}

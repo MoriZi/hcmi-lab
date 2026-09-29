@@ -1,43 +1,179 @@
 ---
 title: Contact
 date: 2022-10-24
-
 type: landing
 
 sections:
-  - block: contact
+  - block: markdown
     content:
-      title: Contact
-      text: |-
-        I welcome inquiries about research collaborations, graduate student supervision, and academic opportunities. Please feel free to reach out via email for any questions or discussions.
-      email: mzihayat@torontomu.ca
-      address:
-        street: 87 Gerrard Street East, EPH204b, Eric Palin Hall
-        city: Toronto
-        region: ON
-        postcode: 'M5B 1G7'
-        country: Canada
-        country_code: CA
-      coordinates:
-        latitude: '43.6532'
-        longitude: '-79.3832'
-      directions: Enter Eric Palin Hall and take the elevator to the 2nd floor, Office EPH204b
-      #contact_links:
-      #  - icon: comments
-      #    icon_pack: fas
-      #    name: Discuss on Forum
-      #    link: 'https://discourse.gohugo.io'
-    
-      # Automatically link email and phone or display as text?
-      autolink: true
+      title: ""
+      text: |
+        <div class="contact-hero-inner">
+          <div class="contact-hero-visual">
+            <img src="/media/contact-hero.png" alt="HCMI Lab workspace overlooking downtown Toronto">
+          </div>
+          <div class="contact-hero-copy">
+            <p class="contact-kicker">Get in touch</p>
+            <h1>Contact<br>Our Lab</h1>
+            <p class="contact-hero-lead">We'd love to hear from you. Whether you have questions about our research, want to collaborate, or are interested in joining our team, feel free to reach out.</p>
+          </div>
+        </div>
     design:
       columns: '1'
+      background:
+        color: '#F4F8FB'
+      spacing:
+        padding: ['0', '0', '0', '0']
+      css_class: contact-hero
 
   - block: markdown
     content:
-      title:
-      subtitle: ''
-      text:
+      title: ""
+      text: |
+        <div class="contact-wrap contact-touch">
+          <svg class="contact-nodes contact-nodes-touch" viewBox="0 0 520 420" fill="none" aria-hidden="true">
+            <g stroke="#8fb6d6" stroke-width="1.1" opacity="0.7">
+              <path d="M80 40 C160 70, 210 30, 300 90"></path>
+              <path d="M300 90 C360 130, 390 80, 470 140"></path>
+              <path d="M80 40 C40 140, 120 190, 190 230"></path>
+              <path d="M190 230 C260 250, 280 180, 300 90"></path>
+              <path d="M190 230 C240 300, 330 280, 410 250"></path>
+              <path d="M410 250 C450 230, 480 200, 510 210"></path>
+              <path d="M410 250 C380 320, 430 360, 490 380"></path>
+              <path d="M190 230 C150 300, 90 340, 40 390"></path>
+            </g>
+            <g fill="#7aa3c7">
+              <circle cx="80" cy="40" r="4.5"></circle>
+              <circle cx="300" cy="90" r="3.5"></circle>
+              <circle cx="470" cy="140" r="3"></circle>
+              <circle cx="190" cy="230" r="5"></circle>
+              <circle cx="410" cy="250" r="4"></circle>
+              <circle cx="510" cy="210" r="2.5"></circle>
+              <circle cx="490" cy="380" r="3.2"></circle>
+              <circle cx="40" cy="390" r="2.8"></circle>
+              <circle cx="260" cy="310" r="2.4"></circle>
+              <circle cx="360" cy="60" r="2.2"></circle>
+            </g>
+          </svg>
+          <div class="contact-touch-grid">
+            <div class="contact-touch-copy">
+              <p class="contact-kicker contact-kicker-section">Our contact</p>
+              <h2>Get in touch</h2>
+              <p>For general inquiries, collaboration opportunities, media requests, or any questions, please reach out to us through the following channels.</p>
+            </div>
+            <div class="contact-channels">
+              <div class="contact-channel">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+                </span>
+                <div>
+                  <p class="contact-label">Email</p>
+                  <a href="mailto:hcmi@torontomu.ca">hcmi@torontomu.ca</a>
+                </div>
+              </div>
+              <div class="contact-channel">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"></path></svg>
+                </span>
+                <div>
+                  <p class="contact-label">Visit us</p>
+                  <p class="contact-address">87 Gerrard Street East, EPH204b,<br>Eric Palin Hall, Toronto, ON M5B 1G7</p>
+                  <p class="contact-directions">Enter Eric Palin Hall and take the elevator to the 2nd floor, Office EPH204b.</p>
+                </div>
+              </div>
+              <div class="contact-channel">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18.3H5.7V9.7h2.6v8.6zM7 8.4A1.5 1.5 0 1 1 7 5.4a1.5 1.5 0 0 1 0 3zM18.3 18.3h-2.6v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3H10.1V9.7h2.5v1.2h.1c.3-.6 1.2-1.4 2.5-1.4 2.7 0 3.1 1.8 3.1 4.1v4.7z"></path></svg>
+                </span>
+                <div>
+                  <p class="contact-label">Follow us</p>
+                  <a href="https://ca.linkedin.com/in/morteza-zihayat" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <blockquote class="contact-quote">“Collaboration turns ideas into real-world impact.”</blockquote>
+        </div>
     design:
       columns: '1'
+      background:
+        color: '#F4F8FB'
+      spacing:
+        padding: ['0', '0', '0', '0']
+      css_class: contact-touch-section
+
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        <div class="contact-wrap contact-location">
+          <div class="contact-location-grid">
+            <div class="contact-location-copy">
+              <p class="contact-kicker contact-kicker-section">Our location</p>
+              <h2>Find us on the map</h2>
+              <p>Our lab is located at Toronto Metropolitan University in the heart of downtown Toronto. We are easily accessible by public transit and within walking distance of major landmarks.</p>
+              <a class="contact-maps-cta" href="https://www.google.com/maps/search/?api=1&amp;query=87+Gerrard+Street+East,+EPH204b,+Toronto,+ON+M5B+1G7" target="_blank" rel="noopener">
+                Open in Google Maps
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"></path></svg>
+              </a>
+            </div>
+            <div class="contact-map">
+              <iframe title="Map showing HCMI Lab at Eric Palin Hall" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.3908%2C43.6528%2C-79.3668%2C43.6652&amp;layer=mapnik" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="contact-map-pin">
+                <span class="contact-map-marker" aria-hidden="true"></span>
+                <span class="contact-map-caption"><strong>HCMI Lab</strong>Eric Palin Hall</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    design:
+      columns: '1'
+      background:
+        color: '#F4F8FB'
+      spacing:
+        padding: ['0', '0', '0', '0']
+      css_class: contact-location-section
+
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        <div class="home-wrap contact-collaborators-inner" id="home-collaborators">
+          <svg class="contact-nodes contact-nodes-collab" viewBox="0 0 420 320" fill="none" aria-hidden="true">
+            <g stroke="#8fb6d6" stroke-width="1.1" opacity="0.65">
+              <path d="M40 40 C90 80, 140 20, 210 70"></path>
+              <path d="M210 70 C270 110, 300 40, 380 90"></path>
+              <path d="M210 70 C180 140, 250 180, 310 210"></path>
+              <path d="M310 210 C350 240, 370 200, 410 230"></path>
+              <path d="M310 210 C280 260, 330 290, 360 310"></path>
+            </g>
+            <g fill="#7aa3c7">
+              <circle cx="40" cy="40" r="3.5"></circle>
+              <circle cx="210" cy="70" r="4.2"></circle>
+              <circle cx="380" cy="90" r="3"></circle>
+              <circle cx="310" cy="210" r="4"></circle>
+              <circle cx="410" cy="230" r="2.6"></circle>
+              <circle cx="360" cy="310" r="3"></circle>
+              <circle cx="140" cy="160" r="2.2"></circle>
+            </g>
+          </svg>
+          <h2>Our past and current Research Collaborators</h2>
+          <p class="home-collaborators-sub">Our past and current collaborators</p>
+          <div class="home-logo-row">
+            <img src="/media/ibm-logo.jpg" alt="IBM">
+            <img src="/media/nserc-logo.jpg" alt="NSERC">
+            <img src="/media/mitacs-logo.jpg" alt="Mitacs">
+            <img src="/media/att.jpg" alt="AT&amp;T">
+            <img src="/media/university-waterloo-logo.jpg" alt="University of Waterloo">
+            <img src="/media/university-toronto-logo.jpg" alt="University of Toronto">
+            <img src="/media/globe-mail-logo.jpg" alt="The Globe and Mail">
+          </div>
+        </div>
+    design:
+      columns: '1'
+      background:
+        color: '#F4F8FB'
+      spacing:
+        padding: ['0', '0', '0', '0']
+      css_class: home-collaborators contact-collaborators
 ---

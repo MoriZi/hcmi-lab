@@ -1,0 +1,26 @@
+{{- $raw := "misc" -}}
+{{- with .Params.publication_types -}}
+  {{- if reflect.IsSlice . -}}
+    {{- $raw = index . 0 | string -}}
+  {{- else -}}
+    {{- $raw = . | string -}}
+  {{- end -}}
+{{- end -}}
+{{- $labels := dict
+  "article-journal" "Journal Article"
+  "paper-conference" "Conference Paper"
+  "inbook" "Book Chapter"
+  "chapter" "Book Chapter"
+  "report" "Report"
+  "patent" "Patent"
+  "misc" "Other"
+  "article" "Preprint"
+  "book" "Book"
+  "thesis" "Thesis"
+-}}
+{{- $label := index $labels $raw | default (humanize $raw) -}}
+{{- $pub := .Params.publication | default "" | string -}}
+{{- if findRE `(?i)patent` $pub -}}
+  {{- $label = "Patent" -}}
+{{- end -}}
+{{- return $label -}}
