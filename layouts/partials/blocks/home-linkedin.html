@@ -1,0 +1,36 @@
+{{- $posts := slice -}}
+{{- with site.Data.linkedin_posts_generated -}}
+  {{- with .posts -}}
+    {{- $posts = . -}}
+  {{- end -}}
+{{- else -}}
+  {{- with site.Data.linkedin_posts -}}
+    {{- with .posts -}}
+      {{- $posts = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="home-wrap" id="home-posts">
+  <div class="home-section-head">
+    <h2>Latest Posts</h2>
+    <a class="home-text-link" href="https://www.linkedin.com/company/hcmi-lab/" target="_blank" rel="noopener noreferrer">View on LinkedIn <span aria-hidden="true">&#8594;</span></a>
+  </div>
+  <div class="home-posts-grid">
+    {{- range $index, $post := first 4 $posts -}}
+      {{- $mediaClass := index (slice "a" "b" "c" "d") $index -}}
+      <article class="home-post-card">
+        <a class="home-post-card-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="Read {{ .title }} on LinkedIn">
+          <div class="home-post-media home-post-media-{{ $mediaClass }}" aria-hidden="true"></div>
+          <div class="home-post-body">
+            <p class="home-post-brand">in HCMI Lab</p>
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+          </div>
+        </a>
+      </article>
+    {{- else -}}
+      <p class="home-posts-empty">Follow HCMI Lab on LinkedIn for our latest updates. <a href="https://www.linkedin.com/company/hcmi-lab/" target="_blank" rel="noopener noreferrer">Visit our page</a>.</p>
+    {{- end -}}
+  </div>
+</div>

@@ -1,1 +1,32 @@
-{{/* The site footer is intentionally omitted on all pages. */}}
+<footer class="site-footer home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <a class="home-footer-logo" href="{{ site.Home.RelPermalink }}" aria-label="HCMI Lab home">
+        <img class="home-footer-tmu-logo" src="{{ "images/tmu-logo.png" | relURL }}" alt="Toronto Metropolitan University">
+        <img class="home-footer-hcmi-logo" src="{{ "images/hcmiLogo.png" | relURL }}" alt="HCMI Lab">
+      </a>
+      <p class="home-footer-copy">© {{ now.Year }} HCMI Lab, Toronto Metropolitan University.</p>
+    </div>
+
+    <div class="home-footer-center">
+      <nav class="home-footer-nav" aria-label="Footer navigation">
+        {{ range site.Menus.main }}
+          <a href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
+        {{ end }}
+      </nav>
+      <p class="home-footer-tagline">Advancing human-centered machine intelligence for a more just and inclusive future.</p>
+    </div>
+
+    <div class="home-footer-meta">
+      <div class="home-footer-social" aria-label="Social links">
+        <a href="https://ca.linkedin.com/in/morteza-zihayat" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="mailto:hcmi@torontomu.ca" aria-label="Email HCMI Lab"><i class="far fa-envelope" aria-hidden="true"></i></a>
+      </div>
+      <nav class="home-footer-legal" aria-label="Legal and accessibility links">
+        <a href="/contact/">Privacy</a>
+        <a href="/contact/">Terms</a>
+        <a href="/contact/">Accessibility</a>
+      </nav>
+    </div>
+  </div>
+</footer>

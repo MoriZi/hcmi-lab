@@ -31,30 +31,6 @@ sections:
       title: ""
       text: |
         <div class="contact-wrap contact-touch">
-          <svg class="contact-nodes contact-nodes-touch" viewBox="0 0 520 420" fill="none" aria-hidden="true">
-            <g stroke="#8fb6d6" stroke-width="1.1" opacity="0.7">
-              <path d="M80 40 C160 70, 210 30, 300 90"></path>
-              <path d="M300 90 C360 130, 390 80, 470 140"></path>
-              <path d="M80 40 C40 140, 120 190, 190 230"></path>
-              <path d="M190 230 C260 250, 280 180, 300 90"></path>
-              <path d="M190 230 C240 300, 330 280, 410 250"></path>
-              <path d="M410 250 C450 230, 480 200, 510 210"></path>
-              <path d="M410 250 C380 320, 430 360, 490 380"></path>
-              <path d="M190 230 C150 300, 90 340, 40 390"></path>
-            </g>
-            <g fill="#7aa3c7">
-              <circle cx="80" cy="40" r="4.5"></circle>
-              <circle cx="300" cy="90" r="3.5"></circle>
-              <circle cx="470" cy="140" r="3"></circle>
-              <circle cx="190" cy="230" r="5"></circle>
-              <circle cx="410" cy="250" r="4"></circle>
-              <circle cx="510" cy="210" r="2.5"></circle>
-              <circle cx="490" cy="380" r="3.2"></circle>
-              <circle cx="40" cy="390" r="2.8"></circle>
-              <circle cx="260" cy="310" r="2.4"></circle>
-              <circle cx="360" cy="60" r="2.2"></circle>
-            </g>
-          </svg>
           <div class="contact-touch-grid">
             <div class="contact-touch-copy">
               <p class="contact-kicker contact-kicker-section">Our contact</p>
@@ -87,7 +63,7 @@ sections:
                 </span>
                 <div>
                   <p class="contact-label">Follow us</p>
-                  <a href="https://ca.linkedin.com/in/morteza-zihayat" target="_blank" rel="noopener">LinkedIn</a>
+                  <a href="https://www.linkedin.com/company/hcmi-lab/" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
               </div>
             </div>

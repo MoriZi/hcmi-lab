@@ -35,5 +35,8 @@ jobs:
           hugo-version: '0.135.0'
           extended: true
 
+      - name: Fetch LinkedIn posts when credentials are configured
+        run: python3 scripts/fetch_linkedin_posts.py
+
       - name: Build
         run: hugo --gc --minify --baseURL "http://hcmi.ee.torontomu.ca/"

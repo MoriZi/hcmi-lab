@@ -1,6 +1,7 @@
 # Hugo build output
 public/
 resources/_gen/
+/data/linkedin_posts_generated.json
 
 # Hugo build lock file
 .hugo_build.lock

@@ -1,0 +1,49 @@
+{{- $section := site.GetPage "section" "publication" -}}
+{{- $publications := slice -}}
+{{- with $section -}}
+  {{- $publications = .RegularPages.ByDate.Reverse -}}
+{{- end -}}
+{{- $latest := first 3 $publications -}}
+{{- $featured := where $publications "Params.featured" true -}}
+{{- $featured = sort $featured "Params.featured_rank" "asc" | first 3 -}}
+
+<div class="home-wrap" id="home-news">
+  <div class="home-section-head">
+    <div>
+      <p class="home-eyebrow">Latest News</p>
+      <h2>News &amp; Updates</h2>
+    </div>
+  </div>
+
+  <a class="home-news-featured" href="{{ "/join/" | relURL }}">
+    <img class="home-news-featured-bg" src="{{ "media/we-are-hiring.png" | relURL }}" alt="">
+    <div class="home-news-featured-copy">
+      <span class="home-pill">We're hiring</span>
+      <h3>Join the HCMI Lab</h3>
+      <p>We are actively recruiting motivated PhD, MASc, MEng, undergraduate, visiting, and postdoctoral researchers passionate about trustworthy, responsible, and human-centered AI. Explore openings, research areas, and how to apply.</p>
+      <span class="home-text-link">See Openings &amp; How to Apply</span>
+    </div>
+  </a>
+
+  <section class="home-news-group" aria-labelledby="home-latest-publications">
+    <h3 id="home-latest-publications" class="sr-only">Latest Publications</h3>
+    <div class="home-news-grid">
+      {{- range $latest -}}
+        {{- partial "home/publication-news-card.html" . -}}
+      {{- end -}}
+    </div>
+  </section>
+
+  <section class="home-news-group" aria-labelledby="home-featured-publications">
+    <h3 id="home-featured-publications" class="sr-only">Featured Publications</h3>
+    <div class="home-news-grid">
+      {{- range $featured -}}
+        {{- partial "home/publication-news-card.html" . -}}
+      {{- end -}}
+    </div>
+  </section>
+
+  <div class="home-center">
+    <a class="home-btn home-btn-outline" href="{{ "/publication/" | relURL }}">Show more</a>
+  </div>
+</div>
