@@ -3,9 +3,10 @@
 {{- with $section -}}
   {{- $publications = .RegularPages.ByDate.Reverse -}}
 {{- end -}}
-{{- $latest := first 3 $publications -}}
 {{- $featured := where $publications "Params.featured" true -}}
 {{- $featured = sort $featured "Params.featured_rank" "asc" | first 3 -}}
+{{- /* Latest news: most recently added to the site (publishDate), newest first, excluding featured */ -}}
+{{- $latest := first 6 (complement $featured $publications.ByPublishDate.Reverse) -}}
 
 <div class="home-wrap" id="home-news">
   <div class="home-section-head">
