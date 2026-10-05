@@ -15,14 +15,10 @@ bio: Dr. Morteza Zihayat is a Canada Research Chair (CRC) in Human-Centered AI a
   at the University of Waterloo (Management Sciences) and IBM Faculty Fellow at IBM
   Centre for Advanced Studies. He is the Director of the Human-Centered Machine Intelligence
   Lab.
-interests:
-- Artificial Intelligence and Machine Learning
-- Representation Learning
-- Ranking and Retrieval Models
-- Graph-based Learning
-- Fairness and Responsible AI
-- Large-scale Data-driven Systems
 social:
+- icon: envelope
+  icon_pack: fas
+  link: mailto:zihayatm@gmail.com
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=lZ8oEM8AAAAJ&hl=en

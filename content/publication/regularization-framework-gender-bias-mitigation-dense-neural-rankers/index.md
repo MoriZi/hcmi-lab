@@ -17,7 +17,8 @@ tags:
 - Neural Rankers
 - Fair Ranking
 - Regularization
-featured: false
+featured: true
+featured_rank: 3
 url_pdf: ''
 url_code: ''
 url_dataset: ''

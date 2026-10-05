@@ -33,6 +33,7 @@ fi
 
 echo "==> Building site (baseURL: $BASE_URL)"
 rm -rf public resources/_gen
+python3 scripts/fetch_linkedin_posts.py
 hugo --gc --minify --baseURL "$BASE_URL"
 
 if [[ -n "$DRY" ]]; then

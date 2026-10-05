@@ -21,7 +21,8 @@ tags:
 - Fair Ranking
 - Information Retrieval
 - Survey
-featured: false
+featured: true
+featured_rank: 1
 url_pdf: ''
 url_code: ''
 url_dataset: ''

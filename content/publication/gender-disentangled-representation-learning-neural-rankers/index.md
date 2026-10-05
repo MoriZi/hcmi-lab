@@ -31,7 +31,8 @@ tags:
   - Neural Rankers
   - Bias Mitigation
   - Information Retrieval
-featured: false
+featured: true
+featured_rank: 5
 
 url_pdf: ""
 url_code: ""

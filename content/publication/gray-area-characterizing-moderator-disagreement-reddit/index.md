@@ -11,14 +11,15 @@ date: "2026-01-01T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2026-01-01T00:00:00Z"
+publishDate: "2026-10-05T00:00:00Z"
 
 # Publication type.
-publication_types: ["article-journal"]
+publication_types: ["paper-conference"]
+publication_status: "published"
 
 # Publication name and optional abbreviated publication name.
-publication: "arXiv preprint arXiv:2601.01620"
-publication_short: "arXiv"
+publication: "Proceedings of the International AAAI Conference on Web and Social Media (ICWSM 2026)"
+publication_short: "ICWSM 2026"
 
 abstract: "This paper characterizes moderator disagreement on Reddit, examining the gray areas where content moderation decisions vary and identifying factors that contribute to inconsistent moderation outcomes."
 

@@ -1,5 +1,5 @@
 ---
-title: Enhanced retrieval effectiveness through selective query generation
+title: Enhanced Retrieval Effectiveness Through Selective Query Generation
 authors:
 - Seyed Mohammad Hosseini
 - Negar Arabzadeh
@@ -13,6 +13,7 @@ publication_types:
 publication: Proceedings of the 33rd ACM International Conference on Information and
   Knowledge Management
 publication_short: CIKM
+publication_status: published
 abstract: Prior research has demonstrated that reformulation of queries can significantly
   enhance retrieval effectiveness. Despite notable successes in neural-based query
   reformulation methods, identifying optimal reformulations that cover the same information

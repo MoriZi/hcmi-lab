@@ -1,0 +1,39 @@
+{{- $section := site.GetPage "section" "publication" -}}
+{{- $publications := slice -}}
+{{- with $section -}}
+  {{- $publications = .RegularPages.ByDate.Reverse -}}
+{{- end -}}
+{{- /* Latest news: most recently added to the site (publishDate), newest first */ -}}
+{{- $latest := first 6 $publications.ByPublishDate.Reverse -}}
+
+<div class="home-wrap" id="home-news">
+  <div class="home-section-head">
+    <div>
+      <p class="home-eyebrow">Latest News</p>
+      <h2>News &amp; Updates</h2>
+    </div>
+  </div>
+
+  <a class="home-news-featured" href="{{ "/join/" | relURL }}">
+    <img class="home-news-featured-bg" src="{{ "media/we-are-hiring.png" | relURL }}" alt="">
+    <div class="home-news-featured-copy">
+      <span class="home-pill">We're hiring</span>
+      <h3>Join the HCMI Lab</h3>
+      <p>Openings for PhD, MASc, MEng and undergraduate students, visiting researchers and postdoctoral fellows. Read the application requirements before contacting the lab.</p>
+      <span class="home-text-link">See Openings &amp; How to Apply</span>
+    </div>
+  </a>
+
+  <section class="home-news-group" aria-labelledby="home-latest-publications">
+    <h3 id="home-latest-publications" class="sr-only">Latest Publications</h3>
+    <div class="home-news-grid">
+      {{- range $latest -}}
+        {{- partial "home/publication-news-card.html" . -}}
+      {{- end -}}
+    </div>
+  </section>
+
+  <div class="home-center">
+    <a class="home-btn home-btn-outline" href="{{ "/publication/" | relURL }}">Show more</a>
+  </div>
+</div>

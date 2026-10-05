@@ -27,4 +27,4 @@ user_groups:
 - Researchers
 ---
 
-Wendi Zhou is a PhD student in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science. Her research focuses on developing innovative approaches to pattern recognition and deep learning.
+Wendi Zhou is a PhD student in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science.

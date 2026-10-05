@@ -1,0 +1,57 @@
+{{ $show_navbar := ((site.Params.header.navbar.enable | default true) | and (ne .Params.header.navbar.enable false)) | or .Params.header.navbar.enable }}
+{{ if $show_navbar }}
+
+{{ $current_page := . }}
+{{ $highlight_active_link := site.Params.header.navbar.highlight_active_link | default true }}
+{{ $show_logo := site.Params.header.navbar.show_logo | default true }}
+{{ $on_photo_hero := eq .Section "contact" }}
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar navbar-hcmi{{ if $on_photo_hero }} navbar-on-photo{{ end }}" id="navbar-main">
+    <div class="container-xl">
+
+      {{ if $show_logo }}
+      <a class="navbar-brand" href="{{ site.Home.RelPermalink }}">
+        <img class="navbar-logo-tmu" src="{{ "images/tmu-logo.png" | relURL }}" alt="Toronto Metropolitan University">
+        <img class="navbar-logo-hcmi" src="{{ "images/hcmiLogo.png" | relURL }}" alt="{{ site.Title }}">
+      </a>
+      {{ end }}
+
+      {{ if site.Menus.main }}
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="{{ i18n "toggle_navigation" }}">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      {{ end }}
+
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+        <ul class="navbar-nav d-md-inline-flex">
+          {{ range site.Menus.main }}
+          {{ $is_link_in_current_path := false }}
+          {{ if $current_page.IsHome | and (or (eq .URL "/") (eq .URL "")) }}
+            {{ $is_link_in_current_path = true }}
+          {{ else if gt (len .URL) 1 }}
+            {{ $is_link_in_current_path = in $current_page.RelPermalink .URL }}
+          {{ end }}
+          <li class="nav-item">
+            <a class="nav-link{{ if $is_link_in_current_path }} is-current{{ end }}{{ if and $highlight_active_link $is_link_in_current_path }} active{{ end }}" href="{{ .URL | relLangURL }}">
+              <span>{{ .Name | safeHTML }}</span>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+        {{ $show_search := site.Params.header.navbar.show_search | default true }}
+        {{ if and site.Params.features.search.provider $show_search | and (ne (lower site.Params.features.search.provider) "docsearch") }}
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="{{ i18n "search" }}"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        {{ end }}
+      </ul>
+
+    </div>
+  </nav>
+</header>
+{{ end }}

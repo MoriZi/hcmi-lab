@@ -1,12 +1,12 @@
 ---
 title: Hai Son Le
 superuser: false
-role: Master's Student
+role: Alumni (Master's)
 organizations:
 - name: Toronto Metropolitan University
   url: https://www.torontomu.ca/
-bio: Hai Son Le is a Master's student in the Human-Centered Machine Intelligence Lab,
-  working on research projects in machine learning and data science.
+bio: Hai Son Le is a former Master's student of the Human-Centered Machine Intelligence Lab,
+  who worked on research projects in machine learning and data science.
 interests:
 - Machine Learning
 - Data Science
@@ -24,7 +24,7 @@ email: hai.son.le@torontomu.ca
 highlight_name: false
 weight: 5
 user_groups:
-- Researchers
+- Alumni
 ---
 
-Hai Son Le is a Master's student in the Human-Centered Machine Intelligence Lab, working on research projects in machine learning and data science. His research focuses on developing innovative approaches to pattern recognition and deep learning.
+Hai Son Le is a former Master's student of the Human-Centered Machine Intelligence Lab, who worked on research projects in machine learning and data science.

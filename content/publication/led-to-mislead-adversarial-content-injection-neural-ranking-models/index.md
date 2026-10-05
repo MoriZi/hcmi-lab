@@ -9,10 +9,11 @@ authors:
 - Ebrahim Bagheri
 date: '2026-01-01T00:00:00Z'
 doi: ''
-publishDate: '2026-01-01T00:00:00Z'
+publishDate: "2026-10-05T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "arXiv preprint arXiv:2605.01591"
-publication_short: "arXiv"
+publication_status: "accepted"
+publication: "ACM Transactions on Intelligent Systems and Technology"
+publication_short: "ACM TIST"
 abstract: ''
 summary: Adversarial content injection attacks that mislead neural ranking models.
 tags:
