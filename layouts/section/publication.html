@@ -121,7 +121,6 @@
           <article class="pubs-row js-pub" data-year="{{ .Date.Format `2006` }}" data-type="{{ $type }}" data-authors="{{ $authorsLine | lower }}" data-title="{{ .Title | lower }}" data-date="{{ .Date.Format `2006-01-02` }}" data-search="{{ printf `%s %s %s %s` .Title $authorsLine $venue (.Date.Format `2006`) | lower }}">
             <div class="pubs-row-year">
               <span>{{ .Date.Format "2006" }}</span>
-              <span class="pubs-row-type">{{ $type }}</span>
             </div>
             <div class="pubs-row-main">
               <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
