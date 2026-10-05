@@ -14,10 +14,10 @@ sections:
           <div class="home-hero-copy">
             <p class="home-kicker">HCMI Lab <span>/</span> Toronto Metropolitan University</p>
             <h1>Human-Centered<br>Machine Intelligence</h1>
-            <p class="home-hero-lead">The HCMI Lab at Toronto Metropolitan University explores how to build intelligent systems that work for people.</p>
+            <p class="home-hero-lead">The HCMI Lab at Toronto Metropolitan University studies generative search, the evaluation and robustness of neural ranking and LLM-based retrieval, and governance on online and decentralized platforms.</p>
             <div class="home-hero-actions">
               <a class="home-btn home-btn-primary" href="/publication/">Our Research</a>
-              <a class="home-btn home-btn-ghost" href="#home-focus">Learn More</a>
+              <a class="home-btn home-btn-ghost" href="/join/">Join Us</a>
             </div>
           </div>
           <div class="home-hero-visual">
@@ -53,9 +53,9 @@ sections:
       text: |
         <div class="home-focus-inner" id="home-focus">
           <div class="home-focus-copy">
-            <p class="home-eyebrow">Our Focus</p>
-            <h2>Building AI that understands and supports human life.</h2>
-            <p>We bring together computer science, psychology, design, and the humanities to create intelligent systems that are fair, transparent, and aligned with human values.</p>
+            <p class="home-eyebrow">Research</p>
+            <h2>Focus areas</h2>
+            <p>Generative search and LLM-based retrieval; LLM-as-a-judge evaluation; fair and bias-aware ranking; adversarial robustness of neural rankers; query performance prediction; platform governance and decentralized autonomous organizations.</p>
             <a class="home-btn home-btn-ghost home-btn-dark" href="/publication/">Learn more <span aria-hidden="true">→</span></a>
           </div>
           <div class="home-focus-board" aria-hidden="true">
@@ -64,16 +64,16 @@ sections:
               <line x1="330" y1="120" x2="430" y2="270"></line>
             </svg>
             <div class="home-note home-note-values">
-              <h3>Human Values</h3>
-              <p>fairness<br>transparency<br>trust</p>
+              <h3>Generative<br>Search</h3>
+              <p>retrieval<br>generation<br>exposure</p>
             </div>
             <div class="home-note home-note-impact">
-              <h3>Real-World Impact</h3>
-              <p>well-being<br>opportunity</p>
+              <h3>Online<br>Platforms</h3>
+              <p>moderation<br>governance<br>DAOs</p>
             </div>
             <div class="home-note home-note-intel">
-              <h3>Machine<br>Intelligence</h3>
-              <p>learning<br>reasoning<br>adaptation</p>
+              <h3>Trustworthy<br>Ranking</h3>
+              <p>fairness<br>robustness<br>evaluation</p>
             </div>
           </div>
         </div>
@@ -101,8 +101,8 @@ sections:
       title: ""
       text: |
         <div class="home-wrap" id="home-collaborators">
-          <h2>Our past and current Research Collaborators</h2>
-          <p class="home-collaborators-sub">Our past and current collaborators</p>
+          <h2>Collaborators</h2>
+          <p class="home-collaborators-sub">Industry, academic, and funding partners, past and present.</p>
           <div class="home-logo-row">
             <img src="media/ibm-logo.jpg" alt="IBM">
             <img src="media/nserc-logo.jpg" alt="NSERC">

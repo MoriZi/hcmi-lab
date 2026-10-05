@@ -27,4 +27,4 @@ user_groups:
 - Researchers
 ---
 
-Mohammad Hosseini is a Master's student in the Human-Centered Machine Intelligence Lab, working on prompt reformulation for Large Language Models. His research focuses on developing innovative approaches to improve LLM performance through better prompt engineering techniques.
+Mohammad Hosseini is a Master's student in the Human-Centered Machine Intelligence Lab, working on prompt reformulation for Large Language Models.

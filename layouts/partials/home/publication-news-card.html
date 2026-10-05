@@ -8,10 +8,13 @@
 {{- $notice := "Published in" -}}
 {{- if $accepted -}}{{- $notice = "Accepted in" -}}{{- end -}}
 {{- $summary := $item.Params.summary | default $item.Summary -}}
+{{- /* Hide summaries that only repeat the title */ -}}
+{{- if eq (lower (strings.TrimRight ". " (plainify $summary))) (lower $item.Title) -}}{{- $summary = "" -}}{{- end -}}
+{{- $year := $item.Date.Format "2006" -}}
 
 <article class="home-news-card">
   <div class="home-news-meta">
-    <span class="home-news-venue">{{ $notice }} {{ $venue }}{{ if $accepted }} {{ $item.Date.Format "2006" }}{{ end }}</span>
+    <span class="home-news-venue">{{ $notice }} {{ $venue }}{{ if not (in $venue $year) }} {{ $year }}{{ end }}</span>
   </div>
   <h3><a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a></h3>
   {{- with $summary }}<p>{{ . | plainify | truncate 190 }}</p>{{ end }}

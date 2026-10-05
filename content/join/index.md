@@ -20,9 +20,9 @@ sections:
             <div class="join-eyebrow">JOIN US</div>
             <h1>Join the HCMI Lab</h1>
             <p>
-              We're always looking for motivated and talented students,
-              researchers and collaborators who are interested in advancing
-              human-centered AI and machine intelligence.
+              The lab supervises PhD, MASc, MEng and undergraduate students,
+              and hosts visiting researchers and postdoctoral fellows.
+              Positions depend on funding and supervisory capacity.
             </p>
             <div class="join-hero-cta">
               <a href="#positions" class="join-btn join-btn-primary">
@@ -111,22 +111,13 @@ sections:
               </div>
               <h2 class="join-h2">About the Lab</h2>
               <p>
-                The Human-Centered Machine Intelligence Lab (HCMI Lab)
-                at Toronto Metropolitan University (TMU) focuses on
-                developing trustworthy, inclusive and human-centered AI systems.
+                The HCMI Lab at Toronto Metropolitan University studies
+                generative search and LLM-based retrieval, fairness and
+                adversarial robustness in ranking, and governance on online
+                and decentralized platforms.
               </p>
               <p>
-                We work at the intersection of machine learning,
-                human-computer interaction, and social computing, with the goal
-                of creating technology that augments human potential and
-                benefits society.
-              </p>
-              <p>
-                Our research spans a range of topics, including human-AI
-                collaboration, explainable AI, fairness and accountability,
-                and real-world deployments. We value curiosity, rigor and
-                a collaborative spirit, and welcome students and researchers
-                from diverse backgrounds and perspectives.
+                See <a href="/publication/">Publications</a> for current work.
               </p>
             </div>
             <div class="join-about-areas">
@@ -134,22 +125,14 @@ sections:
                 <span>RESEARCH AREAS</span>
               </div>
               <div class="join-pills">
-                <span class="join-pill">Human-Centered AI</span>
-                <span class="join-pill">Responsible AI</span>
-                <span class="join-pill">Human-AI Collaboration</span>
-                <span class="join-pill">Explainable AI</span>
-                <span class="join-pill">Fairness, Equity &amp; Accountability</span>
-                <span class="join-pill">Trustworthy AI</span>
-                <span class="join-pill">Assistive &amp; Accessible Technologies</span>
-                <span class="join-pill">Interaction Design</span>
-                <span class="join-pill">Machine Learning</span>
-                <span class="join-pill">Social Computing</span>
-                <span class="join-pill">Multimodal Learning</span>
-                <span class="join-pill">Data Science</span>
-                <span class="join-pill">Edge &amp; Mobile Computing</span>
-                <span class="join-pill">AI for Social Good</span>
-                <span class="join-pill">Healthcare AI</span>
-                <span class="join-pill">Education &amp; Learning</span>
+                <span class="join-pill">Generative Search</span>
+                <span class="join-pill">LLM-Based Retrieval</span>
+                <span class="join-pill">LLM-as-a-Judge</span>
+                <span class="join-pill">Fair Ranking</span>
+                <span class="join-pill">Adversarial IR</span>
+                <span class="join-pill">Query Performance Prediction</span>
+                <span class="join-pill">Platform Governance</span>
+                <span class="join-pill">Decentralized Systems (DAOs)</span>
               </div>
             </div>
           </div>
@@ -173,32 +156,30 @@ sections:
           <div id="phd" class="join-position-card">
             <div class="join-position-top">
               <div>
-                <h3>Prospective PhD &amp; MSc. Students</h3>
+                <h3>PhD &amp; MASc Students</h3>
                 <p>
-                  We are looking for highly motivated PhD and MSc students
-                  with a strong interest in human-centered AI, machine learning,
-                  information retrieval or related areas.
+                  Thesis-based graduate students in information retrieval,
+                  machine learning or related areas.
                 </p>
               </div>
-              <time>Sep 12, 2025</time>
             </div>
             <div class="join-position-grid">
               <div>
-                <h4>KEY AREAS OF INTEREST INCLUDE</h4>
+                <h4>AREAS</h4>
                 <ul>
-                  <li>Human-AI collaboration</li>
-                  <li>Explainable and trustworthy AI</li>
-                  <li>Fairness and accountability</li>
-                  <li>HCI and social computing</li>
+                  <li>Generative search and LLM-based retrieval</li>
+                  <li>LLM-as-a-judge and retrieval evaluation</li>
+                  <li>Fair ranking and adversarial robustness</li>
+                  <li>Platform governance and DAOs</li>
                 </ul>
               </div>
               <div>
-                <h4>IDEAL APPLICANTS SHOULD</h4>
+                <h4>REQUIREMENTS</h4>
                 <ul>
-                  <li>Have a relevant background</li>
-                  <li>Demonstrate strong research or design experience</li>
-                  <li>Be collaborative and open-minded</li>
-                  <li>Be proficient in English</li>
+                  <li>Degree in CS, ECE, statistics or a related field (a master's for PhD applicants)</li>
+                  <li>Prior research: a thesis, publication or substantial project</li>
+                  <li>Proficiency in Python and a deep learning framework</li>
+                  <li>Meets TMU graduate English language requirements</li>
                 </ul>
               </div>
             </div>
@@ -209,28 +190,25 @@ sections:
               <div>
                 <h3>MEng Students</h3>
                 <p>
-                  We welcome MEng students interested in applying engineering,
-                  computer science or related skills to human-centered AI
-                  and real-world problems.
+                  Course-based master's students completing a project
+                  with the lab.
                 </p>
               </div>
-              <time>Aug 12, 2025</time>
             </div>
             <div class="join-position-grid">
               <div>
-                <h4>POTENTIAL AREAS</h4>
+                <h4>AREAS</h4>
                 <ul>
-                  <li>AI systems and applications</li>
-                  <li>Human-computer interaction</li>
-                  <li>Data science and analytics</li>
+                  <li>LLM-based retrieval and RAG systems</li>
+                  <li>Evaluation pipelines for search and LLMs</li>
                 </ul>
               </div>
               <div>
                 <h4>REQUIREMENTS</h4>
                 <ul>
-                  <li>Relevant academic background</li>
-                  <li>Strong problem-solving skills</li>
-                  <li>Interest in research and innovation</li>
+                  <li>Enrolled in a TMU MEng program</li>
+                  <li>Proficiency in Python</li>
+                  <li>Coursework in machine learning</li>
                 </ul>
               </div>
             </div>
@@ -241,29 +219,23 @@ sections:
               <div>
                 <h3>Undergraduate Students</h3>
                 <p>
-                  Undergraduate students are encouraged to join the lab as
-                  research assistants, interns or directed-study students.
-                  This is a great opportunity to gain hands-on experience
-                  and work on meaningful projects.
+                  Research assistant, internship and directed-study positions.
                 </p>
               </div>
-              <time>Jul 30, 2025</time>
             </div>
             <div class="join-position-grid">
               <div>
-                <h4>CURRENTLY LOOKING FOR</h4>
+                <h4>REQUIREMENTS</h4>
                 <ul>
-                  <li>Students with relevant coursework</li>
-                  <li>Research interest and motivation</li>
-                  <li>Good communication skills</li>
+                  <li>Completed coursework in programming and statistics</li>
+                  <li>Proficiency in Python</li>
                 </ul>
               </div>
               <div>
-                <h4>IDEAL CANDIDATES</h4>
+                <h4>INCLUDE IN YOUR EMAIL</h4>
                 <ul>
-                  <li>Enthusiastic and reliable</li>
-                  <li>Team players</li>
-                  <li>Open to learning</li>
+                  <li>Transcript</li>
+                  <li>Available hours per week</li>
                 </ul>
               </div>
             </div>
@@ -274,12 +246,10 @@ sections:
               <div>
                 <h3>Visiting Students &amp; Visiting Scholars</h3>
                 <p>
-                  We welcome visiting students and scholars from other
-                  institutions who are interested in collaborating on
-                  research projects.
+                  Researchers from other institutions working on a defined
+                  joint project.
                 </p>
               </div>
-              <time>Jun 20, 2025</time>
             </div>
             <div class="join-position-grid">
               <div>
@@ -293,9 +263,8 @@ sections:
               <div>
                 <h4>REQUIREMENTS</h4>
                 <ul>
-                  <li>Strong research background</li>
-                  <li>Clear research goals</li>
-                  <li>Support from home institution, if applicable</li>
+                  <li>A proposed project aligned with the lab's work</li>
+                  <li>Funding from the home institution or an external source</li>
                 </ul>
               </div>
             </div>
@@ -306,28 +275,25 @@ sections:
               <div>
                 <h3>Postdoctoral Fellows</h3>
                 <p>
-                  We are seeking talented researchers with a strong research
-                  record and interest in human-centered AI, trustworthy AI
-                  and related areas.
+                  PhD holders in information retrieval, machine learning
+                  or a related field.
                 </p>
               </div>
-              <time>May 18, 2025</time>
             </div>
             <div class="join-position-grid">
               <div>
-                <h4>SUCCESSFUL APPLICANTS DEMONSTRATE</h4>
+                <h4>REQUIREMENTS</h4>
                 <ul>
-                  <li>Strong publication record</li>
-                  <li>Independent research experience</li>
-                  <li>Collaboration mindset</li>
+                  <li>First-author publications at relevant venues (e.g. SIGIR, CIKM, ECIR, ICWSM)</li>
+                  <li>A research statement</li>
                 </ul>
               </div>
               <div>
-                <h4>AREAS OF INTEREST</h4>
+                <h4>AREAS</h4>
                 <ul>
-                  <li>HCI and human-AI interaction</li>
-                  <li>Fairness, accountability and ethics</li>
-                  <li>Real-world AI applications</li>
+                  <li>Generative search and LLM evaluation</li>
+                  <li>Fair and robust neural ranking</li>
+                  <li>Platform governance and decentralized systems</li>
                 </ul>
               </div>
             </div>
@@ -353,11 +319,9 @@ sections:
               <span class="join-step-num">1</span>
               <div class="join-step-content">
                 <span class="join-step-index">01</span>
-                <h3>Generate a First Draft</h3>
+                <h3>Prepare Your Documents</h3>
                 <p>
-                  Start with a draft of your cover letter and CV,
-                  and highlight your research experience, relevant skills
-                  and interests.
+                  A CV and a short statement of research interest.
                 </p>
               </div>
             </div>
@@ -365,10 +329,9 @@ sections:
               <span class="join-step-num">2</span>
               <div class="join-step-content">
                 <span class="join-step-index">02</span>
-                <h3>Before Contacting Me</h3>
+                <h3>Read Recent Publications</h3>
                 <p>
-                  Please read recent publications and explore the lab's
-                  research areas before contacting me.
+                  Your email should refer to specific work from the lab.
                 </p>
               </div>
             </div>
@@ -391,28 +354,14 @@ sections:
               <span class="join-step-num">4</span>
               <div class="join-step-content">
                 <span class="join-step-index">04</span>
-                <h3>Your Email Should Include</h3>
+                <h3>Email Contents</h3>
                 <div class="join-apply-columns">
                   <ul>
-                    <li>Brief introduction</li>
-                    <li>Why you want to join the HCMI Lab</li>
-                    <li>Research interests</li>
-                    <li>Previous research experience</li>
-                    <li>Programming and machine learning experience</li>
+                    <li>Degree program and intended start term</li>
+                    <li>Research interests, with reference to lab publications</li>
+                    <li>Prior research: thesis, papers or code</li>
+                    <li>CV attached</li>
                   </ul>
-                  <div>
-                    <h4>USEFUL TECHNICAL SKILLS</h4>
-                    <div class="join-pills join-pills-sm">
-                      <span class="join-pill">Python</span>
-                      <span class="join-pill">PyTorch</span>
-                      <span class="join-pill">TensorFlow</span>
-                      <span class="join-pill">R</span>
-                      <span class="join-pill">SQL</span>
-                      <span class="join-pill">Data Analysis</span>
-                      <span class="join-pill">MATLAB</span>
-                      <span class="join-pill">Git</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -422,8 +371,8 @@ sections:
                 <span class="join-step-index">05</span>
                 <h3>Selection &amp; Interview</h3>
                 <p>
-                  Shortlisted candidates will be contacted for an interview.
-                  Interviews may be conducted online or in person.
+                  Shortlisted candidates are contacted for an interview,
+                  online or in person.
                 </p>
               </div>
             </div>
@@ -433,9 +382,7 @@ sections:
                 <span class="join-step-index">06</span>
                 <h3>Submit Your Formal Application</h3>
                 <p>
-                  If you are invited to proceed, submit your formal
-                  application through the Toronto Metropolitan University
-                  Graduate Admissions portal.
+                  If invited, apply through TMU Graduate Admissions.
                 </p>
               </div>
             </div>
@@ -447,9 +394,8 @@ sections:
             <div>
               <h3>What I Look For</h3>
               <p>
-                I look for motivated, curious and collaborative individuals
-                who are passionate about human-centered AI, have strong
-                research potential, and are committed to making a positive impact.
+                Evidence of independent technical work: a thesis, paper
+                or substantial code repository.
               </p>
             </div>
           </div>
@@ -469,10 +415,6 @@ sections:
             <span>FUNDING OPPORTUNITIES</span>
           </div>
           <h2 class="join-h2">Funding Opportunities</h2>
-          <p class="join-section-intro">
-            We support talented students through various funding opportunities.
-            Please check the details below for eligibility and application information.
-          </p>
           <div class="join-funding-grid">
             <div class="join-funding-card">
               <h3>CANADIAN STUDENTS</h3>
@@ -480,7 +422,6 @@ sections:
                 <li>NSERC Graduate Scholarships</li>
                 <li>TMU Graduate Awards</li>
                 <li>Ontario Graduate Scholarship (OGS)</li>
-                <li>Canada Research Training Program (CRTP)</li>
               </ul>
             </div>
             <div class="join-funding-card">
@@ -508,12 +449,9 @@ sections:
           <div class="join-section-label">
             <span>USEFUL RESOURCES</span>
           </div>
-          <p class="join-section-intro">
-            Helpful links and materials to support your application and research journey.
-          </p>
           <div class="join-resource-links">
-            <a href="https://hcmi.ee.torontomu.ca/people/">Graduate Studies →</a>
-            <a href="https://hcmi.ee.torontomu.ca/publication/">Research Areas →</a>
+            <a href="https://www.torontomu.ca/graduate/">Graduate Studies →</a>
+            <a href="/publication/">Publications →</a>
             <a href="https://www.torontomu.ca/graduate/">
               Funding Guide →
             </a>
@@ -532,15 +470,15 @@ sections:
             <details>
               <summary>Do I need previous research experience?</summary>
               <p>
-                Previous research experience is valuable, but opportunities
-                depend on the position and project.
+                Required for PhD and postdoctoral applicants. Not required
+                for undergraduate positions.
               </p>
             </details>
             <details>
               <summary>Should I contact the lab before applying?</summary>
               <p>
-                Prospective students should review the research areas and
-                application information before reaching out.
+                Yes. Graduate applicants should contact the lab before
+                submitting a formal application.
               </p>
             </details>
           </div>
@@ -559,13 +497,12 @@ sections:
           <div class="join-cta">
             <h2>Read Before You Reach Out</h2>
             <p>
-              Please take a moment to review the information on this page,
-              including our research areas, available positions and application
-              process. If you have any questions after reading, feel free to reach out.
+              Emails that do not follow the subject format above may not
+              receive a reply.
             </p>
             <div class="join-hero-cta">
               <a
-                href="https://hcmi.ee.torontomu.ca/publication/"
+                href="#positions"
                 class="join-btn join-btn-primary">
                 View Open Positions →
               </a>

@@ -13,9 +13,9 @@ sections:
             <img src="/media/contact-hero.png" alt="HCMI Lab workspace overlooking downtown Toronto">
           </div>
           <div class="contact-hero-copy">
-            <p class="contact-kicker">Get in touch</p>
-            <h1>Contact<br>Our Lab</h1>
-            <p class="contact-hero-lead">We'd love to hear from you. Whether you have questions about our research, want to collaborate, or are interested in joining our team, feel free to reach out.</p>
+            <p class="contact-kicker">Contact</p>
+            <h1>Contact</h1>
+            <p class="contact-hero-lead">Inquiries regarding research, collaboration, and graduate supervision can be sent to the lab by email.</p>
           </div>
         </div>
     design:
@@ -33,9 +33,9 @@ sections:
         <div class="contact-wrap contact-touch">
           <div class="contact-touch-grid">
             <div class="contact-touch-copy">
-              <p class="contact-kicker contact-kicker-section">Our contact</p>
-              <h2>Get in touch</h2>
-              <p>For general inquiries, collaboration opportunities, media requests, or any questions, please reach out to us through the following channels.</p>
+              <p class="contact-kicker contact-kicker-section">Correspondence</p>
+              <h2>Email and address</h2>
+              <p>Email is the preferred channel for general, collaboration, and media inquiries.</p>
             </div>
             <div class="contact-channels">
               <div class="contact-channel">
@@ -52,9 +52,9 @@ sections:
                   <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"></path></svg>
                 </span>
                 <div>
-                  <p class="contact-label">Visit us</p>
+                  <p class="contact-label">Address</p>
                   <p class="contact-address">87 Gerrard Street East, EPH204b,<br>Eric Palin Hall, Toronto, ON M5B 1G7</p>
-                  <p class="contact-directions">Enter Eric Palin Hall and take the elevator to the 2nd floor, Office EPH204b.</p>
+                  <p class="contact-directions">Second floor, office EPH204b.</p>
                 </div>
               </div>
               <div class="contact-channel">
@@ -62,13 +62,12 @@ sections:
                   <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18.3H5.7V9.7h2.6v8.6zM7 8.4A1.5 1.5 0 1 1 7 5.4a1.5 1.5 0 0 1 0 3zM18.3 18.3h-2.6v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3H10.1V9.7h2.5v1.2h.1c.3-.6 1.2-1.4 2.5-1.4 2.7 0 3.1 1.8 3.1 4.1v4.7z"></path></svg>
                 </span>
                 <div>
-                  <p class="contact-label">Follow us</p>
-                  <a href="https://www.linkedin.com/company/hcmi-lab/" target="_blank" rel="noopener">LinkedIn</a>
+                  <p class="contact-label">LinkedIn</p>
+                  <a href="https://www.linkedin.com/company/hcmi-lab/" target="_blank" rel="noopener">HCMI Lab</a>
                 </div>
               </div>
             </div>
           </div>
-          <blockquote class="contact-quote">“Collaboration turns ideas into real-world impact.”</blockquote>
         </div>
     design:
       columns: '1'
@@ -85,9 +84,9 @@ sections:
         <div class="contact-wrap contact-location">
           <div class="contact-location-grid">
             <div class="contact-location-copy">
-              <p class="contact-kicker contact-kicker-section">Our location</p>
-              <h2>Find us on the map</h2>
-              <p>Our lab is located at Toronto Metropolitan University in the heart of downtown Toronto. We are easily accessible by public transit and within walking distance of major landmarks.</p>
+              <p class="contact-kicker contact-kicker-section">Location</p>
+              <h2>Eric Palin Hall</h2>
+              <p>Toronto Metropolitan University, downtown Toronto.</p>
               <a class="contact-maps-cta" href="https://www.google.com/maps/search/?api=1&amp;query=87+Gerrard+Street+East,+EPH204b,+Toronto,+ON+M5B+1G7" target="_blank" rel="noopener">
                 Open in Google Maps
                 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"></path></svg>
@@ -133,8 +132,8 @@ sections:
               <circle cx="140" cy="160" r="2.2"></circle>
             </g>
           </svg>
-          <h2>Our past and current Research Collaborators</h2>
-          <p class="home-collaborators-sub">Our past and current collaborators</p>
+          <h2>Collaborators</h2>
+          <p class="home-collaborators-sub">Industry, academic, and funding partners, past and present.</p>
           <div class="home-logo-row">
             <img src="/media/ibm-logo.jpg" alt="IBM">
             <img src="/media/nserc-logo.jpg" alt="NSERC">
