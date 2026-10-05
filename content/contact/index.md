@@ -44,7 +44,7 @@ sections:
                 </span>
                 <div>
                   <p class="contact-label">Email</p>
-                  <a href="mailto:hcmi@torontomu.ca">hcmi@torontomu.ca</a>
+                  <a href="mailto:mzihayat@torontomu.ca">mzihayat@torontomu.ca</a>
                 </div>
               </div>
               <div class="contact-channel">
