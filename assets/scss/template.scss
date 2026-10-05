@@ -4616,7 +4616,8 @@ body:has(.pubs-page) .page-footer > .container {
 
 .pubs-featured-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  /* Cards stretch to fill the row, however many are featured */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
 
