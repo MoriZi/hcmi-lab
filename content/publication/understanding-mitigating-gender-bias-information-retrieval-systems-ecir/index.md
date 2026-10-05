@@ -18,8 +18,7 @@ tags:
 - Gender Bias
 - Fair Ranking
 - Information Retrieval
-featured: true
-featured_rank: 4
+featured: false
 url_pdf: ''
 url_code: ''
 url_dataset: ''

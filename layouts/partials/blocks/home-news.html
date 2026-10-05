@@ -3,10 +3,8 @@
 {{- with $section -}}
   {{- $publications = .RegularPages.ByDate.Reverse -}}
 {{- end -}}
-{{- $featured := where $publications "Params.featured" true -}}
-{{- $featured = sort $featured "Params.featured_rank" "asc" | first 3 -}}
-{{- /* Latest news: most recently added to the site (publishDate), newest first, excluding featured */ -}}
-{{- $latest := first 6 (complement $featured $publications.ByPublishDate.Reverse) -}}
+{{- /* Latest news: most recently added to the site (publishDate), newest first */ -}}
+{{- $latest := first 6 $publications.ByPublishDate.Reverse -}}
 
 <div class="home-wrap" id="home-news">
   <div class="home-section-head">
@@ -30,15 +28,6 @@
     <h3 id="home-latest-publications" class="sr-only">Latest Publications</h3>
     <div class="home-news-grid">
       {{- range $latest -}}
-        {{- partial "home/publication-news-card.html" . -}}
-      {{- end -}}
-    </div>
-  </section>
-
-  <section class="home-news-group" aria-labelledby="home-featured-publications">
-    <h3 id="home-featured-publications" class="sr-only">Featured Publications</h3>
-    <div class="home-news-grid">
-      {{- range $featured -}}
         {{- partial "home/publication-news-card.html" . -}}
       {{- end -}}
     </div>

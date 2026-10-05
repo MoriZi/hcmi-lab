@@ -29,8 +29,7 @@ tags:
 - Query Generation
 - Search Effectiveness
 - Machine Learning
-featured: true
-featured_rank: 2
+featured: false
 url_pdf: ''
 url_code: ''
 url_dataset: ''
