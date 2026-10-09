@@ -5,17 +5,15 @@
         <img class="home-footer-tmu-logo" src="{{ "images/tmu-logo.png" | relURL }}" alt="Toronto Metropolitan University">
         <img class="home-footer-hcmi-logo" src="{{ "images/hcmiLogo.png" | relURL }}" alt="HCMI Lab">
       </a>
-      <p class="home-footer-copy">© {{ now.Year }} HCMI Lab, Toronto Metropolitan University.</p>
-    </div>
-
-    <div class="home-footer-center">
-      <nav class="home-footer-nav" aria-label="Footer navigation">
-        {{ range site.Menus.main }}
-          <a href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
-        {{ end }}
-      </nav>
+      <p class="home-footer-name">Human-Centered Machine Intelligence</p>
       <p class="home-footer-tagline">Toronto Metropolitan University, Faculty of Engineering and Architectural Science.</p>
     </div>
+
+    <nav class="home-footer-nav" aria-label="Footer navigation">
+      {{ range site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name | safeHTML }}</a>
+      {{ end }}
+    </nav>
 
     <div class="home-footer-meta">
       <div class="home-footer-social" aria-label="Social links">
@@ -29,4 +27,7 @@
       </nav>
     </div>
   </div>
+
+  <div class="home-footer-rule" aria-hidden="true"><span></span></div>
+  <p class="home-footer-copy">© {{ now.Year }} HCMI Lab, Toronto Metropolitan University.</p>
 </footer>

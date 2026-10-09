@@ -21,7 +21,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#F4F8FB'
+        color: '#F7F5F0'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: contact-hero
@@ -72,7 +72,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#F4F8FB'
+        color: '#F7F5F0'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: contact-touch-section
@@ -104,7 +104,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#F4F8FB'
+        color: '#F7F5F0'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: contact-location-section
@@ -147,7 +147,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#F4F8FB'
+        color: '#F7F5F0'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: home-collaborators contact-collaborators
