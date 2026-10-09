@@ -6154,3 +6154,43 @@ h1, h2,
     transition: none !important;
   }
 }
+
+/* Mobile header: logo left, then search and menu buttons side by side in normal flow (no overlap) */
+@media (max-width: 991.98px) {
+  .navbar.navbar-hcmi .container-xl {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .navbar.navbar-hcmi .navbar-brand {
+    order: 1;
+    margin: 0 !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  .navbar.navbar-hcmi .nav-icons {
+    order: 2;
+    position: static !important;
+    transform: none !important;
+    margin: 0 0 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .navbar.navbar-hcmi .nav-icons .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0 !important;
+  }
+
+  .navbar.navbar-hcmi .navbar-toggler {
+    order: 3;
+    margin: 0 0 0 8px !important;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
