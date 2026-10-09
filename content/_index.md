@@ -14,7 +14,7 @@ sections:
           <div class="home-hero-copy">
             <p class="home-kicker">HCMI Lab <span>/</span> Toronto Metropolitan University</p>
             <h1>Human-Centered<br>Machine Intelligence</h1>
-            <p class="home-hero-lead">The HCMI Lab at Toronto Metropolitan University studies generative search, the evaluation and robustness of neural ranking and LLM-based retrieval, and governance on online and decentralized platforms.</p>
+            <p class="home-hero-lead">We study how people search, trust and govern information in a world shaped by machine intelligence.</p>
             <div class="home-hero-actions">
               <a class="home-btn home-btn-primary" href="/publication/">Our Research <span class="home-btn-arrow" aria-hidden="true">→</span></a>
               <a class="home-btn home-btn-ghost" href="/join/">Join Us</a>

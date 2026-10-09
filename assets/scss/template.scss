@@ -6055,10 +6055,7 @@ h1, h2,
   align-items: start;
 }
 
-.home-footer-logo .home-footer-hcmi-logo {
-  filter: brightness(0) invert(1);
-  opacity: 0.92;
-}
+/* Footer uses the brand kit's bright logo, made for dark backgrounds */
 
 .site-footer.home-footer .home-footer-brand,
 .site-footer.home-footer .home-footer-brand p {
