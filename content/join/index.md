@@ -13,7 +13,10 @@ sections:
       text: |
         <div class="join-hero">
           <div class="join-hero-image">
-            <img src="/media/join-hcmilab.png" alt="HCMI Lab research environment">
+            <picture>
+              <source srcset="/media/join-hero.webp" type="image/webp">
+              <img src="/media/join-hero.jpg" alt="HCMI Lab research environment">
+            </picture>
           </div>
           <div class="join-hero-overlay"></div>
           <div class="join-hero-content">

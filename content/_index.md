@@ -14,14 +14,17 @@ sections:
           <div class="home-hero-copy">
             <p class="home-kicker">HCMI Lab <span>/</span> Toronto Metropolitan University</p>
             <h1>Human-Centered<br>Machine Intelligence</h1>
-            <p class="home-hero-lead">The HCMI Lab at Toronto Metropolitan University studies generative search, the evaluation and robustness of neural ranking and LLM-based retrieval, and governance on online and decentralized platforms.</p>
+            <p class="home-hero-lead">We study how people search, trust and govern information in a world shaped by machine intelligence.</p>
             <div class="home-hero-actions">
-              <a class="home-btn home-btn-primary" href="/publication/">Our Research</a>
+              <a class="home-btn home-btn-primary" href="/publication/">Our Research <span class="home-btn-arrow" aria-hidden="true">→</span></a>
               <a class="home-btn home-btn-ghost" href="/join/">Join Us</a>
             </div>
           </div>
           <div class="home-hero-visual">
-            <img src="/media/hero-image.png" alt="A hand touching a glowing node in a human-centered network">
+            <picture>
+              <source srcset="/media/hero-machine.webp" type="image/webp">
+              <img src="/media/hero-machine.jpg" width="1690" height="931" fetchpriority="high" alt="A researcher turns the wheel of a brass-and-iron calculating engine whose layered glass plates form a neural network">
+            </picture>
             <span class="home-hero-watermark">
                 <span>SCROLL</span>
                <span class="scroll-line"></span>
@@ -31,7 +34,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#FFFFFF'
+        color: '#F7F5F0'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: home-hero
@@ -42,7 +45,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#FFFFFF'
+        color: '#F7F5F0'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: home-news
@@ -80,7 +83,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#F7F8FA'
+        color: '#EEEAE1'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: home-focus
@@ -91,7 +94,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#FFFFFF'
+        color: '#F7F5F0'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: home-posts
@@ -116,7 +119,7 @@ sections:
     design:
       columns: '1'
       background:
-        color: '#FFFFFF'
+        color: '#F7F5F0'
       spacing:
         padding: ['0', '0', '0', '0']
       css_class: home-collaborators
