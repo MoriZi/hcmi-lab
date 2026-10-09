@@ -14,8 +14,8 @@ sections:
         <div class="join-hero">
           <div class="join-hero-image">
             <picture>
-              <source srcset="/media/join-layers.webp" type="image/webp">
-              <img src="/media/join-layers.jpg" alt="HCMI Lab research environment">
+              <source srcset="/media/join-hero.webp" type="image/webp">
+              <img src="/media/join-hero.jpg" alt="HCMI Lab research environment">
             </picture>
           </div>
           <div class="join-hero-overlay"></div>
