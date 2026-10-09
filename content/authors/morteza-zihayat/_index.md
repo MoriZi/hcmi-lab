@@ -18,14 +18,14 @@ bio: Dr. Morteza Zihayat is a Canada Research Chair (CRC) in Human-Centered AI a
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:zihayatm@gmail.com
+  link: mailto:mzihayat@torontomu.ca
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=lZ8oEM8AAAAJ&hl=en
 - icon: linkedin
   icon_pack: fab
   link: https://ca.linkedin.com/in/morteza-zihayat
-email: zihayatm@gmail.com
+email: mzihayat@torontomu.ca
 highlight_name: true
 weight: 0
 user_groups:
