@@ -23,7 +23,7 @@ sections:
           <div class="home-hero-visual">
             <picture>
               <source srcset="/media/hero-machine.webp" type="image/webp">
-              <img src="/media/hero-machine.jpg" width="1690" height="931" fetchpriority="high" alt="A researcher turns the wheel of a brass-and-iron calculating engine whose layered glass plates form a neural network">
+              <img src="/media/hero-machine.jpg" width="1760" height="874" fetchpriority="high" alt="A researcher turns the wheel of a brass-and-iron calculating engine whose layered glass plates form a neural network">
             </picture>
             <span class="home-hero-watermark">
                 <span>SCROLL</span>

@@ -45,6 +45,10 @@
 
   /* Layout: every page, the nav and the footer share one 1280px content column */
   --column: 1280px;
+  /* Hero artwork starts just after the text block (column offset + text width), so no empty band */
+  /* Hero height follows the artwork's proportions (1760 x 874) so the whole picture shows, uncropped */
+  --hero-height: #{"max(560px, calc(100vw * 874 / 1760 * 0.7))"}; /* 70% of the artwork's height: trims some sky and desk */
+  --hero-image-left: #{"max(45%, calc((100% - var(--column)) / 2 + 600px))"};
   --page-max: 1440px;
   --page-gutter: clamp(24px, 5vw, 80px);
 
@@ -5546,11 +5550,12 @@ h1, h2,
 }
 
 .home-hero-inner {
-  min-height: clamp(560px, 46vw, 760px);
+  min-height: var(--hero-height);
 }
 
+/* Artwork spans the whole hero behind the text; an ivory wash keeps the text side readable */
 .home-hero-visual {
-  left: 45%;
+  left: 0;
   right: 0;
   top: 0;
   bottom: 0;
@@ -5572,9 +5577,9 @@ h1, h2,
 .home-hero-visual::after {
   background: linear-gradient(
     90deg,
-    var(--hcmi-ivory) 0%,
-    rgba(247, 245, 240, 0.92) 12%,
-    rgba(247, 245, 240, 0) 40%
+    rgba(247, 245, 240, 0.9) 0%,
+    rgba(247, 245, 240, 0.84) #{"calc(var(--page-gutter) + 470px)"},
+    rgba(247, 245, 240, 0) #{"calc(var(--page-gutter) + 760px)"}
   ) !important;
 }
 
@@ -5582,8 +5587,8 @@ h1, h2,
 .home-hero-copy {
   width: 100%;
   max-width: none;
-  min-height: clamp(560px, 46vw, 720px);
-  padding: 120px 0 72px #{"max(24px, calc((100% - var(--column)) / 2))"};
+  min-height: var(--hero-height);
+  padding: 120px 0 72px var(--page-gutter); /* text near the window edge so more of the artwork shows */
   animation: hcmi-rise 700ms ease both;
 }
 
@@ -5913,7 +5918,7 @@ h1, h2,
 /* Join and Contact: full-width artwork on the right, like the homepage hero */
 @media (min-width: 992px) {
   .contact-hero-visual {
-    left: 45%;
+    left: var(--hero-image-left);
   }
 
   .contact-hero-visual img {
@@ -5931,7 +5936,7 @@ h1, h2,
 
   .join-hero-image,
   .join-hero-overlay {
-    left: 45%;
+    left: var(--hero-image-left);
   }
 }
 
