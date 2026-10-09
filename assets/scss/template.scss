@@ -43,7 +43,8 @@
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
   --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 
-  /* Layout */
+  /* Layout: every page, the nav and the footer share one 1280px content column */
+  --column: 1280px;
   --page-max: 1440px;
   --page-gutter: clamp(24px, 5vw, 80px);
 
@@ -1199,7 +1200,7 @@ hr, .hr-dotted, .rule {
    
    .people-kicker-block-inner,
    .people-kicker-block .people-kicker {
-     max-width: 1180px;
+     max-width: 1336px;
      margin: 0 auto;
      padding: 0 28px;
      display: block;
@@ -1238,7 +1239,7 @@ hr, .hr-dotted, .rule {
    }
    
    .people-hero .container {
-     max-width: 1180px !important;
+     max-width: 1336px !important;
      margin: 0 auto;
      padding: 0 28px;
      position: relative;
@@ -1290,7 +1291,7 @@ hr, .hr-dotted, .rule {
      align-items: baseline;
      justify-content: space-between;
      gap: 16px;
-     max-width: 1180px;
+     max-width: 1336px;
      margin: 0 auto 40px auto;
      padding: 0 28px 16px 28px;
      border-bottom: 1px solid var(--hcmi-border);
@@ -1341,7 +1342,7 @@ hr, .hr-dotted, .rule {
    .people-section-faculty .container,
    .people-section-researchers .container,
    .people-section-pi .container {
-     max-width: 1180px !important;
+     max-width: 1336px !important;
      margin: 0 auto;
      padding: 0 28px;
    }
@@ -1572,7 +1573,7 @@ hr, .hr-dotted, .rule {
    
    .people-quote-section .container,
    .people-quote-section .markdown {
-     max-width: 1180px;
+     max-width: 1336px;
      margin: 0 auto;
      padding: 0 28px;
    }
@@ -1599,7 +1600,7 @@ hr, .hr-dotted, .rule {
    /* ---------- ALUMNI ---------- */
    .wg-people .markdown,
    .page-people .markdown {
-     max-width: 1180px;
+     max-width: 1336px;
      margin: 0 auto !important;
      padding: 56px 28px !important;
      background: var(--hcmi-parchment) !important;
@@ -1684,7 +1685,7 @@ hr, .hr-dotted, .rule {
 }
 
 .people-section-header {
-  max-width: 1180px;
+  max-width: 1336px;
   margin-bottom: 24px;
   padding-bottom: 12px;
 }
@@ -1742,7 +1743,7 @@ hr, .hr-dotted, .rule {
 .people-section-faculty-header .container,
 .people-section-researchers-header .container,
 .people-quote-section .container {
-  max-width: 1180px !important;
+  max-width: 1336px !important;
   padding-right: 28px !important;
   padding-left: 28px !important;
 }
@@ -1788,7 +1789,7 @@ hr, .hr-dotted, .rule {
 
 .people-section-pi-header { padding: 32px 0 0 !important; }
 .people-section-pi { padding: 12px 0 64px !important; }
-.people-section-pi .container { max-width: 1180px !important; padding: 0 28px !important; }
+.people-section-pi .container { max-width: 1336px !important; padding: 0 28px !important; }
 .people-section-pi .people-widget { display: block !important; margin: 0 !important; }
 .people-section-pi .people-person {
   width: 100% !important;
@@ -1852,7 +1853,7 @@ hr, .hr-dotted, .rule {
 .people-section-faculty,
 .people-section-researchers { padding: 4px 0 24px !important; }
 .people-section-faculty .container,
-.people-section-researchers .container { max-width: 1180px !important; padding: 0 28px !important; }
+.people-section-researchers .container { max-width: 1336px !important; padding: 0 28px !important; }
 .people-section-faculty .people-widget,
 .people-section-researchers .people-widget {
   display: grid !important;
@@ -1932,7 +1933,7 @@ hr, .hr-dotted, .rule {
 
 .people-quote-section { padding: 20px 0 !important; background: var(--hcmi-parchment) !important; }
 .people-alumni { padding: 28px 0 34px !important; }
-.people-alumni .container { max-width: 1180px !important; padding: 0 28px !important; }
+.people-alumni .container { max-width: 1336px !important; padding: 0 28px !important; }
 .people-alumni-header { margin: 0 0 20px !important; }
 .people-alumni-grid {
   display: grid;
@@ -2173,7 +2174,7 @@ hr, .hr-dotted, .rule {
   }
   
   .join-container {
-    max-width: 1080px;
+    max-width: var(--column);
     margin: 0 auto;
   }
   
@@ -2978,7 +2979,7 @@ hr, .hr-dotted, .rule {
 }
 
 .page-wrapper .home-section.wg-markdown .container {
-  max-width: 1180px;
+  max-width: 1336px;
 }
 
 .home-section.home-hero,
@@ -3020,7 +3021,7 @@ hr, .hr-dotted, .rule {
 }
 
 .home-wrap {
-  max-width: 1120px;
+  max-width: 1328px;
   margin: 0 auto;
   padding: 72px 24px;
 }
@@ -3569,7 +3570,7 @@ hr, .hr-dotted, .rule {
 }
 
 .home-focus-inner {
-  max-width: 1180px;
+  max-width: 1328px;
   margin: 0 auto;
   padding: 80px 24px;
   display: grid;
@@ -3771,7 +3772,7 @@ hr, .hr-dotted, .rule {
 }
 
 .home-footer-inner {
-  max-width: 1120px;
+  max-width: var(--column);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.1fr 1.4fr auto;
@@ -3997,9 +3998,9 @@ body:has(.contact-hero) #content {
 
 .contact-wrap {
   position: relative;
-  max-width: 1120px;
+  max-width: 1328px;
   margin: 0 auto;
-  padding: 72px 32px;
+  padding: 72px 24px;
   overflow: hidden;
 }
 
@@ -4449,7 +4450,7 @@ body:has(.pubs-page) .page-footer > .container {
 }
 
 .pubs-wrap {
-  max-width: 1180px;
+  max-width: 1336px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -5405,6 +5406,20 @@ body {
   border-bottom: 1px solid var(--hcmi-border) !important;
 }
 
+/* Logo and links sit on the same content column as the page */
+@media (min-width: 992px) {
+  .navbar.navbar-hcmi {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .navbar.navbar-hcmi .container-xl {
+    max-width: 1328px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .navbar.navbar-hcmi .nav-link {
   font-size: 12px !important;
   font-weight: 600 !important;
@@ -5535,7 +5550,7 @@ h1, h2,
 }
 
 .home-hero-visual {
-  left: 40%;
+  left: 45%;
   right: 0;
   top: 0;
   bottom: 0;
@@ -5558,16 +5573,17 @@ h1, h2,
   background: linear-gradient(
     90deg,
     var(--hcmi-ivory) 0%,
-    rgba(247, 245, 240, 0.92) 8%,
-    rgba(247, 245, 240, 0) 34%
+    rgba(247, 245, 240, 0.92) 12%,
+    rgba(247, 245, 240, 0) 40%
   ) !important;
 }
 
+/* Full-width hero: artwork bleeds to the right edge; text starts on the shared content column */
 .home-hero-copy {
-  width: 48%;
-  max-width: 780px;
-  min-height: clamp(560px, 46vw, 760px);
-  padding: 120px 0 72px var(--page-gutter);
+  width: 100%;
+  max-width: none;
+  min-height: clamp(560px, 46vw, 720px);
+  padding: 120px 0 72px #{"max(24px, calc((100% - var(--column)) / 2))"};
   animation: hcmi-rise 700ms ease both;
 }
 
@@ -5581,10 +5597,10 @@ h1, h2,
 
 .home-hero-copy h1 {
   font-family: var(--font-display) !important;
-  font-size: clamp(48px, 4.9vw, 80px) !important;
+  font-size: clamp(48px, 4.5vw, 72px) !important;
   font-weight: 600 !important;
   line-height: 0.93 !important;
-  max-width: none;
+  max-width: 8.4em; /* fits "Human-Centered", wraps "Machine Intelligence" */
   overflow-wrap: normal !important;
   word-break: normal !important;
   hyphens: none !important;
@@ -5617,6 +5633,7 @@ h1, h2,
     display: flex !important;
     flex-direction: column;
     min-height: 0;
+    padding: 0;
   }
 
   .home-hero-copy {
@@ -5817,6 +5834,107 @@ h1, h2,
   }
 }
 
+/* Contact hero: artwork already fades to light on the left, so anchor it there */
+.home-section.contact-hero {
+  background: var(--hcmi-ivory) !important;
+}
+
+.contact-hero-visual picture {
+  display: contents;
+}
+
+.contact-hero-visual img {
+  object-position: 0% center;
+}
+
+.contact-hero-visual::after {
+  background: linear-gradient(
+    90deg,
+    var(--hcmi-ivory) 0%,
+    rgba(247, 245, 240, 0.85) 18%,
+    rgba(247, 245, 240, 0) 38%
+  ) !important;
+}
+
+.contact-hero-lead {
+  color: var(--hcmi-text-secondary) !important;
+}
+
+@media (max-width: 767px) {
+  .home-section.contact-hero {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .contact-hero-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 0;
+  }
+
+  .contact-hero-visual {
+    position: relative;
+    inset: auto;
+    height: clamp(240px, 60vw, 380px);
+  }
+
+  .contact-hero-visual img {
+    object-position: 72% center;
+  }
+
+  .contact-hero-visual::after {
+    background: linear-gradient(180deg, var(--hcmi-ivory) 0%, rgba(247, 245, 240, 0) 22%) !important;
+  }
+
+  .contact-hero-copy {
+    padding-bottom: 24px !important;
+  }
+}
+
+/* Join and Contact hero text start on the shared content column */
+@media (min-width: 768px) {
+  .join-hero-content,
+  .contact-hero-copy {
+    padding-left: #{"max(24px, calc((100% - var(--column)) / 2))"} !important;
+  }
+
+  .join-hero-content,
+  .contact-hero-copy {
+    max-width: none;
+  }
+
+  .join-hero-content > *,
+  .contact-hero-copy > * {
+    max-width: 480px;
+  }
+}
+
+/* Join and Contact: full-width artwork on the right, like the homepage hero */
+@media (min-width: 992px) {
+  .contact-hero-visual {
+    left: 45%;
+  }
+
+  .contact-hero-visual img {
+    object-position: 72% center !important;
+  }
+
+  .contact-hero-visual::after {
+    background: linear-gradient(
+      90deg,
+      var(--hcmi-ivory) 0%,
+      rgba(247, 245, 240, 0.92) 12%,
+      rgba(247, 245, 240, 0) 40%
+    ) !important;
+  }
+
+  .join-hero-image,
+  .join-hero-overlay {
+    left: 45%;
+  }
+}
+
 /* Clear the fixed navbar so the title lines up with the Publications header */
 .people-hero .people-kicker {
   color: var(--hcmi-brass) !important;
@@ -5931,7 +6049,7 @@ h1, h2,
 }
 
 .home-footer-inner {
-  max-width: 1120px;
+  max-width: var(--column);
   grid-template-columns: 1.3fr 1fr auto;
   gap: 32px;
   align-items: start;
@@ -5942,8 +6060,9 @@ h1, h2,
   opacity: 0.92;
 }
 
-.home-footer-brand {
-  text-align: left;
+.site-footer.home-footer .home-footer-brand,
+.site-footer.home-footer .home-footer-brand p {
+  text-align: left !important;
 }
 
 .home-footer-name {
@@ -5987,7 +6106,7 @@ h1, h2,
 
 .home-footer-rule {
   position: relative;
-  max-width: 1120px;
+  max-width: var(--column);
   height: 1px;
   margin: 40px auto 18px;
   background: rgba(179, 138, 67, 0.45);
@@ -6005,7 +6124,7 @@ h1, h2,
 }
 
 .site-footer.home-footer .home-footer-copy {
-  max-width: 1120px;
+  max-width: var(--column);
   margin: 0 auto !important;
   text-align: center;
   font-size: 12px !important;

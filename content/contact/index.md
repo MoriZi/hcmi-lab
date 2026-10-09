@@ -10,7 +10,10 @@ sections:
       text: |
         <div class="contact-hero-inner">
           <div class="contact-hero-visual">
-            <img src="/media/contact-hero.png" alt="HCMI Lab workspace overlooking downtown Toronto">
+            <picture>
+              <source srcset="/media/contact-hero.webp" type="image/webp">
+              <img src="/media/contact-hero.jpg" alt="HCMI Lab workspace overlooking downtown Toronto">
+            </picture>
           </div>
           <div class="contact-hero-copy">
             <p class="contact-kicker">Contact</p>
