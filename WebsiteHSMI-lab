@@ -1,0 +1,13 @@
+[33m4a8f9c3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mimprove-homepage[m[33m, [m[1;31morigin/improve-homepage[m[33m)[m Refine homepage and mobile layout
+[33m4d63233[m Implement HCMI website redesign
+[33me32f1d0[m Baseline before redesign
+[33madcc56c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Add MEng student, restructure People page, and update site content
+[33mb257a72[m update links
+[33m738cb19[m Update deployment docs, home page subtitle, and add abstract fetching script
+[33mf3e9e11[m Update website: add publications, update people page, configure logo, and improve styling
+[33m216d2e4[m added rimona
+[33me9f2095[m clean up on people page.
+[33m974cefa[m more changes on the videos
+[33madd2f02[m remove fake data
+[33m8ee29f4[m Initial commit: HCMI Lab website with Hugo Blox Builder
+[33madd4dae[m add all pages
